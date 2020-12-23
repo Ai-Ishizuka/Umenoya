@@ -1,76 +1,79 @@
 @charset "utf-8"
-/* 全体スタイル調整 */
+/* =================================================================
+	common
+================================================================= */
 :root {
     font-size: 15px;
 }
 * {
     box-sizing: border-box;
 }
-h1,
-h2,
-h3 {
+h1 {
+    margin: 0;
+}
+h2, h3 {
     margin-top: 0;
-    line-height: 1.5;
-    letter-spacing: 0.2em;
+    line-height: 1.4;
+    letter-spacing: 0.1rem;
     text-align: center;
 }
-h3 {
-    color: #85a7cc;
-    font-size: 1rem;
+
+h2 {
+    color: #40220f;
+    font-size: 1.5rem;
     margin-bottom: 3rem;
 }
-body{
+
+body {
     font-family: 'Noto Sans JP',
-    'Open Sans', sans-erif;
+    'Open Sans', sans-serif;
     font-weight: 400;
     color: #333;
     background-color: #fff;
 }
+
 a {
     color: #257a01;
     text-decoration: none;
+    transition: opacity 0.3s;
 }
+
+a:hover { 
+    color: aquamarine;
+    opacity: 0.8s; }
+
 a img {
     border: none;
+    height: auto;
+}
 
-}
-a:hover {
-    color: black;
-    text-decoration: underline;
-}
-p{
+p {
     margin-top: 0;
     margin-bottom: 1.5rem;
     text-align: justify;
 }
-ul {
-    margin: 1rem 0;
-    padding: 0;
-    list-style: none;
-}
-img {
-    height: auto;
-}
 
 section {
-    padding: 2rem 0;
+    padding: 3rem 0;
 }
-/* Header */
 
-#top {
-    display: block;
-    background-color: #fff;
-    padding: 1.5rem 2rem;
+/* =================================================================
+	Main Visual
+================================================================= */
+#top {  
+    background: url("../images/MV_background.svg") repeat;
+    background-size: auto;
+    display: flex;
+    align-items: center;
+    padding: 6rem;
+    height: 100vh;
+    width: 100vw;
 }
-#top a {
-    color: #444;
+    
 }
-#top a:hover {
-    color: #45c80d;
-}
-.logo {
-    line-height: 1;
-    margin-bottom: 1rem;
+h1 {
+    font-size: 0.75rem;
+    margin-bottom: 0;
 }
 
 .header-nav-items {
