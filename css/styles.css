@@ -1,15 +1,51 @@
 @charset "utf-8"
-/* =================================================================
-	common
-================================================================= */
+
+/*
+Theme Name:  Ai Ishizuka
+Theme URI: http://
+Description: AI Ishizuka
+Version: 1.4
+Author: STUDIO702
+Author URI: http://	
+*/
+
+/*
+===== CONTENTS =====================================================
+
+	Index:
+  - Base Style
+  - Layout
+  
+===================================================================*/
+
+
+
+/* 1: Base Style Setting
+----------------------------------------------------------------------------------------------*/
+
+/* Base Setting
+==========================================================*/
 :root {
-    font-size: 15px;
+    font-size: 20px;
 }
+
+body {
+    font-family: 'YakuHanJP', 'Noto Sans JP', sans-serif;
+}
+
 * {
     box-sizing: border-box;
 }
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 h1 {
-    margin: 0;
+    font-size: 1.25rem;
+    margin: 1.5rem 0 3rem 0;
+    letter-spacing: 2px;
+    font-weight: bold;
 }
 h2, h3 {
     margin-top: 0;
@@ -35,11 +71,10 @@ body {
 a {
     color: #257a01;
     text-decoration: none;
-    transition: opacity 0.3s;
 }
 
 a:hover { 
-    color: aquamarine;
+    color: #257a01;
     opacity: 0.8s; }
 
 a img {
@@ -57,23 +92,71 @@ section {
     padding: 3rem 0;
 }
 
-/* =================================================================
-	Main Visual
-================================================================= */
+
+/* Menu Button
+==========================================================*/
+/* Styling */
+.Menu-Button {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    background-color: #ffebf5;
+    color: #ff007f;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1.6px solid #ff007f;
+    text-align: center;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.Menu-Button span {
+    position: absolute;
+    top: 50%;
+    left: 22%;
+    line-height: 1.6;
+    font-weight: bold;
+    font-size: 1.1rem;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.Menu-Button:hover {
+    display: block;
+    color: #fff;
+    background-color: #ff007f;
+}
+
+/* Layout */
+.Menu-Button {
+    position: absolute;
+    top: 100px;
+    right: 120px;
+}
+
+
+/* Main Visual
+==========================================================*/
+
 #top {  
-    background: url("../images/MV_background.svg") repeat;
+    background: url("../imag es/MV_background.svg") repeat;
     background-size: auto;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     padding: 6rem;
     height: 100vh;
     width: 100vw;
 }
-    
+
+.title-set {
+    line-height: 1.6;
+    margin: 0 0 3rem 0;
 }
-h1 {
-    font-size: 0.75rem;
-    margin-bottom: 0;
+
+.title-name {
+    padding: 0;
+    font-size: 1rem;
 }
 
 .header-nav-items {
@@ -84,12 +167,14 @@ h1 {
     margin: 0;
     padding: 0;
 }
+
 .header-nav-item{
-    margin: 0 1 rem 0 0;
+    margin: 0 1rem 0 0;
     text-transform: uppercase;
 }
 .header-nav-item:last-child {
     margin-right: 0;
 }
 
-
+/* Menu Button
+==========================================================*/
