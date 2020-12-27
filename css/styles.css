@@ -41,10 +41,26 @@ body {
     box-sizing: border-box;
 }
 
+html, body, div, span, object, iframe, h1, h2, h3,
+h4, h5, h6, p, a, blockquote, pre, abbr, address,
+cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong,
+sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label,
+legend, table, caption, tbody, tfoot, thead, tr, th, td, article,
+aside, canvas, details, figcaption, figure, footer, header,
+menu, nav, section, summary, time, mark, audio, video {
+    /* margin: 0; */
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
 h1 {
     font-size: 1.25rem;
-    margin: 1.5rem 0 3rem 0;
-    letter-spacing: 2px;
+    margin: 6rem 0 1rem 0;
+    letter-spacing: .1rem;
     font-weight: bold;
 }
 h2, h3 {
@@ -66,6 +82,14 @@ body {
     font-weight: 400;
     color: #333;
     background-color: #fff;
+}
+
+::selection {
+    background: #fac559;
+}
+
+::-moz-selection {
+    background: #ffe8d1;
 }
 
 a {
@@ -95,7 +119,9 @@ section {
 
 /* Menu Button
 ==========================================================*/
+
 /* Styling */
+
 .Menu-Button {
     position: relative;
     display: block;
@@ -113,8 +139,8 @@ section {
 
 .Menu-Button span {
     position: absolute;
-    top: 50%;
-    left: 22%;
+    top: 51%;
+    left: 21.5%;
     line-height: 1.6;
     font-weight: bold;
     font-size: 1.1rem;
@@ -128,7 +154,8 @@ section {
     background-color: #ff007f;
 }
 
-/* Layout */
+/* Menu Button - Layout */
+
 .Menu-Button {
     position: absolute;
     top: 100px;
@@ -144,6 +171,7 @@ section {
     background-size: auto;
     display: flex;
     align-items: flex-end;
+    margin: 0 0 6rem 0;
     padding: 6rem;
     height: 100vh;
     width: 100vw;
@@ -151,17 +179,23 @@ section {
 
 .title-set {
     line-height: 1.6;
-    margin: 0 0 3rem 0;
+    margin: 0 0 0 0;
+    width: 400px;
 }
 
 .title-name {
-    padding: 0;
-    font-size: 1rem;
+    display: block;
+    padding-bottom: .8rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: .1rem;
 }
+
+/* Navi Menu - Layout */
 
 .header-nav-items {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     list-style-type: none;
     list-style-position: outside;
     margin: 0;
@@ -169,11 +203,54 @@ section {
 }
 
 .header-nav-item{
-    margin: 0 1rem 0 0;
-    text-transform: uppercase;
+    padding: .8rem .5rem 0 0;
 }
+
 .header-nav-item:last-child {
     margin-right: 0;
+}
+
+/* Navi Menu - Styling */
+
+.click {
+    display: block;
+    padding: .7rem 1.4rem;
+    border-radius: 1.5rem;
+    border: 2.4px solid #fac559;
+    background-color: #fff;
+    color: #40220f;
+    font-size: .8rem;
+    font-weight: bolder;
+    letter-spacing: .1rem;
+}
+
+.click:hover {
+    color: #40220f;
+    background-color: #ffd277;
+    border: 2.4px solid #ffd277;
+}
+
+.click {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.click::after {
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    content: '';
+    width: 100%;
+    height: 1.5px;
+    background: red;
+    transform: scale(0, 1);
+    transform-origin: center top;
+    transition: transform .3s;
+}
+
+.click:hover::after {
+    transform: scale(0.3, 1);
 }
 
 /* Menu Button
