@@ -33,10 +33,6 @@ body {
     font-family: 'YakuHanJP', 'Noto Sans JP', sans-serif;
 }
 
-* {
-    box-sizing: border-box;
-}
-
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -112,10 +108,6 @@ p {
     text-align: justify;
 }
 
-section {
-    padding: 3rem 0;
-}
-
 
 /* Menu Button
 ==========================================================*/
@@ -127,11 +119,11 @@ section {
     display: block;
     text-decoration: none;
     background-color: #ffebf5;
-    color: #ff007f;
+    color: #f86a89;
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 1.6px solid #ff007f;
+    border: 1.6px solid #f86a89;
     text-align: center;
     overflow: hidden;
     transition: .4s;
@@ -151,7 +143,7 @@ section {
 .Menu-Button:hover {
     display: block;
     color: #fff;
-    background-color: #ff007f;
+    background-color: #f86a89;
 }
 
 /* Menu Button - Layout */
@@ -178,7 +170,7 @@ section {
 
 .top {
     width: 50%;
-    height: 70%;
+    height: 30%;
     z-index: 1;
 }
 
@@ -201,29 +193,16 @@ section {
     transform: translate(-50%, -50%);
 }
 
-
-
-/*#top {  
-    background: url("../imag es/MV_background.svg") repeat;
-    background-size: auto;
-    display: flex;
-    align-items: flex-end;
-    margin: 0 0 6rem 0;
-    padding: 6rem;
-    height: 100vh;
-    width: 100vw;
-}*/
-
 .title-set {
     line-height: 1.4;
-    margin: 0 0 0 6rem;
+    margin: 0 0 0 8.6rem;
     width: 400px;
 }
 
 .title-name {
     display: block;
     margin-bottom: .8rem;
-    font-size: 0.8rem;
+    font-size: .8rem;
     font-weight: bold;
     letter-spacing: .1rem;
 }
@@ -280,7 +259,7 @@ section {
     content: '';
     width: 100%;
     height: 1.5px;
-    background: red;
+    background: #ff3681;
     transform: scale(0, 1);
     transform-origin: center top;
     transition: transform .3s;
@@ -289,6 +268,87 @@ section {
 .click:hover::after {
     transform: scale(0.3, 1);
 }
+
+@media screen and (max-width: 640px) {
+    
+    .top-background {
+        width: 100vw;
+    }
+
+    .top {
+        width: 0%;
+    }
+    
+    .title-set {
+        margin: 0 0 0 0;
+        width: 100vw;
+        padding: 2rem;
+    }
+
+    .Menu-Button {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .Logo {
+        width: 236px;
+        height: 47px;
+    }
+
+    .Wrapper {
+        height: auto;
+        align-items: flex-end;
+    }
+    h1 {
+        font-size: .7rem;
+        margin: 1.6rem 0 .3rem 0;
+    }
+    .title-name {
+        margin-bottom: .4rem;
+        font-size: .8rem;
+    }
+
+    .header-nav-items {
+        display: block;
+        margin: 0 0 2.7rem 0;
+    }
+    
+    .header-nav-item {
+        padding: .48rem 0 0 0;
+    }
+    .click {
+        padding: .6rem 1.2rem;
+        font-size: .75rem;
+    }
+    .click::after { 
+        display: none;
+    }
+
+    .Menu-Button {
+        display: block;
+        text-decoration: none;
+        background-color: #f86a89;
+        color: #fff;
+        border: none;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        text-align: center;
+        overflow: hidden;
+    }
+    .Menu-Button span {
+        position: absolute;
+        top: 51%;
+        left: 21.5%;
+        line-height: 1.4;
+        font-weight: normal;
+        font-size: .9rem;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+}
+
 
 /* Menu Button
 ==========================================================*/
