@@ -14,7 +14,7 @@ Author URI: http://
 
 	Index:
   - Base Style
-  - Layout
+  - 
   
 ===================================================================*/
 
@@ -24,7 +24,7 @@ Author URI: http://
 ----------------------------------------------------------------------------------------------*/
 
 /* Base Setting
-==========================================================*/
+===================================================================*/
 :root {
     font-size: 20px;
 }
@@ -69,7 +69,6 @@ h2, h3 {
 h2 {
     color: #40220f;
     font-size: 1.5rem;
-    margin-bottom: 3rem;
 }
 
 body {
@@ -81,7 +80,8 @@ body {
 }
 
 ::selection {
-    background: #fac559;
+    background: #c8c9ca;
+    color: #000;
 }
 
 ::-moz-selection {
@@ -109,21 +109,21 @@ p {
 }
 
 
-/* Menu Button
-==========================================================*/
+/* Main Visual - 1.Menu Button 2.Main Visual 3.Navi Menu 4.Responsive
+===================================================================*/
 
-/* Styling */
+/* 1.Menu Button - Styling */
 
 .Menu-Button {
     position: relative;
     display: block;
     text-decoration: none;
-    background-color: #ffebf5;
-    color: #f86a89;
+    background-color: #cfeee1;
+    color: #0a814d;
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 1.6px solid #f86a89;
+    border: 1.6px solid #0dac67;
     text-align: center;
     overflow: hidden;
     transition: .4s;
@@ -143,7 +143,7 @@ p {
 .Menu-Button:hover {
     display: block;
     color: #fff;
-    background-color: #f86a89;
+    background-color: #0dac67;
 }
 
 /* Menu Button - Layout */
@@ -156,8 +156,7 @@ p {
 }
 
 
-/* Main Visual
-==========================================================*/
+/* 2.Main visual */
 
 .Wrapper {
     position: relative;
@@ -170,7 +169,6 @@ p {
 
 .top {
     width: 50%;
-    height: 30%;
     z-index: 1;
 }
 
@@ -207,7 +205,8 @@ p {
     letter-spacing: .1rem;
 }
 
-/* Navi Menu - Layout */
+
+/* 3.Navi Menu - Layout */
 
 .header-nav-items {
     display: flex;
@@ -232,18 +231,18 @@ p {
     display: block;
     padding: .7rem 1.4rem;
     border-radius: 1.5rem;
-    border: 1.6px solid #fac559;
+    border: 2.2px solid #dcdcdc;
     background-color: #fff;
-    color: #40220f;
+    color: #0dac67;
     font-size: .8rem;
     font-weight: bolder;
     letter-spacing: .1rem;
 }
 
 .click:hover {
-    color: #40220f;
-    background-color: #ffd277;
-    border: 1.6px solid #ffd277;
+    color: #0dac67;
+    background-color: #fff;
+    border: 2.2px solid #dcdcdc;
 }
 
 .click {
@@ -259,7 +258,7 @@ p {
     content: '';
     width: 100%;
     height: 1.5px;
-    background: #ff3681;
+    background: #888;
     transform: scale(0, 1);
     transform-origin: center top;
     transition: transform .3s;
@@ -268,6 +267,9 @@ p {
 .click:hover::after {
     transform: scale(0.3, 1);
 }
+
+
+/* 4.Responsive - for smartphone */
 
 @media screen and (max-width: 640px) {
     
@@ -328,7 +330,7 @@ p {
     .Menu-Button {
         display: block;
         text-decoration: none;
-        background-color: #f86a89;
+        background-color: #289f67;
         color: #fff;
         border: none;
         width: 120px;
@@ -350,5 +352,62 @@ p {
 }
 
 
-/* Menu Button
-==========================================================*/
+/* Content - 1.About 2.
+===================================================================*/
+
+/* 1.About */
+
+#about {
+    background-image: url(../images/Wave-01.svg);
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: 100%;
+}
+/* background size でカバーが正しい*/
+
+.about-inner {
+    width: 80%;
+    height: auto;
+    max-width: 1080px;
+    margin: 0 auto;
+    position: relative;
+    top: 200px;
+}
+
+.a-h1 {
+    margin: 0 auto;
+    display: inline-block;
+    padding: 3rem 0 0 0;
+}
+
+.a-content{
+    /*width: 80%;*/
+    margin-left: 20%;
+    border: 1px solid #333;
+    padding: 3.5rem 3rem 1.5rem 3rem;
+    margin-top: -3.4rem;
+    display: block;
+}
+
+.a-inner {}
+
+.a-copy {
+    text-align: left;
+    padding-bottom: 1rem;
+}
+
+.a-text {
+    width: 50%;
+    height: auto;
+    margin: 0 5% 0 0;
+    float: left;
+    letter-spacing: 0.04em;
+    line-height: 2;
+    font-size: .9rem;
+}
+
+.a-image01 {
+    width: 45%;
+    height: auto;
+    display: inline-block;
+}
