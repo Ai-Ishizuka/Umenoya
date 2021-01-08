@@ -30,7 +30,7 @@ Author URI: http://
 }
 
 body {
-    font-family: 'YakuHanJP', 'Noto Sans JP', sans-serif;
+    font-family: 'YakuHanJP', 'Noto Sans JP', 'chelsea-market-open', sans-serif;
 }
 
 *, *::before, *::after {
@@ -352,18 +352,34 @@ p {
 }
 
 
-/* Content - 1.About 2.
+/* Content - 1.About 2.Style
 ===================================================================*/
 
 /* 1.About */
+
 
 #about {
     background-image: url(../images/Wave-01.svg);
     background-repeat: no-repeat;
     background-position: cover;
     background-size: 100%;
+    padding: 150px 0 0px;
 }
 /* background size でカバーが正しい*/
+
+#about::before {
+    content: attr(data-eng);
+    position: absolute;
+    font-family: 'chelsea-market-open', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+    font-size: 11rem;
+    right: -30px;
+    top: 112%;
+    opacity: .7
+}
+
 
 .about-inner {
     width: 80%;
@@ -371,7 +387,7 @@ p {
     max-width: 1080px;
     margin: 0 auto;
     position: relative;
-    top: 200px;
+    top: 100px;
 }
 
 .a-h1 {
@@ -411,3 +427,54 @@ p {
     height: auto;
     display: inline-block;
 }
+
+
+/* 2.Style */
+
+#style {
+    background-image: url(../images/wave-02.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 260px;
+    display: flex;
+    flex-direction: column;
+}
+
+.style-inner {
+    width: 80%;
+    height: auto;
+    max-width: 1080px;
+    margin: 0 auto;
+    position: block; 
+}
+/*a-innerはrelative*/
+
+#style::before {
+    content: attr(data-eng);
+    position: absolute;
+    font-family: 'chelsea-market-open', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+    font-size: 11rem;
+    right: -30px;
+    top: 112%;
+    opacity: .7
+}
+
+.s-h2 {
+    display: block;
+    padding: 7rem 0 0 0;
+    text-align: left}
+
+.s-list-wrap {
+
+}
+
+.s-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+
