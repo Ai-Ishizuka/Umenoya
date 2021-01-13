@@ -362,8 +362,9 @@ p {
     background-image: url(../images/Wave-01.svg);
     background-repeat: no-repeat;
     background-position: cover;
+    position: relative;
     background-size: 100%;
-    padding: 150px 0 0px;
+    padding: 150px 0 150px;
 }
 /* background size でカバーが正しい*/
 
@@ -374,12 +375,11 @@ p {
     font-weight: 400;
     font-style: normal;
     color: #fff;
-    font-size: 11rem;
-    right: -30px;
-    top: 112%;
+    font-size: 14rem;
+    top: -4px;
+    right: 0px;
     opacity: .7
 }
-
 
 .about-inner {
     width: 80%;
@@ -429,15 +429,17 @@ p {
 }
 
 
-/* 2.Style */
+/* 2.Style = Consept */
 
 #style {
     background-image: url(../images/wave-02.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 260px;
-    display: flex;
-    flex-direction: column;
+    position: relative;
+    margin-top: 300px;
+    width: 100vw;
+    height: 90vh;
+    z-index: 1;
 }
 
 .style-inner {
@@ -445,9 +447,10 @@ p {
     height: auto;
     max-width: 1080px;
     margin: 0 auto;
-    position: block; 
+    z-index: 0;
 }
 /*a-innerはrelative*/
+
 
 #style::before {
     content: attr(data-eng);
@@ -456,16 +459,19 @@ p {
     font-weight: 400;
     font-style: normal;
     color: #fff;
-    font-size: 11rem;
-    right: -30px;
-    top: 112%;
-    opacity: .7
+    font-size: 14rem;
+    top: -4%;
+    right: 0px;
+    opacity: .7;
+    letter-spacing: 0.03em;
+    z-index: -1;
 }
 
 .s-h2 {
     display: block;
-    padding: 7rem 0 0 0;
-    text-align: left}
+    padding: 7rem 0 3rem 0;
+    text-align: left
+}
 
 .s-list-wrap {
 
@@ -475,6 +481,57 @@ p {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    margin: 0 5rem 0 5rem;
+}
+
+.s-set {
+    margin: 0 11% 0 0;
+    position: relative;
+    display: inline-block;
+}
+
+.s-set::before {
+    content: "";
+    position: absolute;
+    border-right: 1px solid #0dac67;
+    top: 90px;
+    width: 1px;
+    height: 190px;
+    margin: 0 0 0 -50px
+}
+
+.s-set:first-child::before {
+    border-right: none;
+}
+
+.s-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 170px;
+    margin-bottom: 30px;
+}
+
+.s-set .s-icon img {
+    width: 120px;
+    height: auto;
+}
+
+.s-set .s-text h3 {
+    margin-bottom: 20px;
+    padding: .9rem .7rem .9rem .7rem;
+    background-color: #fff;
+    font-weight: bold;
+}
+
+.s-set .s-text p {
+    font-size: 0.78rem;
+    letter-spacing: .06em;
+    line-height: 1.7;
 }
 
 
+
+#news {
+    margin-top: 10rem;
+}
