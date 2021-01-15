@@ -30,7 +30,8 @@ Author URI: http://
 }
 
 body {
-    font-family: 'YakuHanJP', 'Noto Sans JP', 'chelsea-market-open', sans-serif;
+    font-family: 'YakuHanJP', 'Noto Sans JP',
+    'chelsea-market-open', sans-serif;
 }
 
 *, *::before, *::after {
@@ -44,7 +45,7 @@ sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label,
 legend, table, caption, tbody, tfoot, thead, tr, th, td, article,
 aside, canvas, details, figcaption, figure, footer, header,
 menu, nav, section, summary, time, mark, audio, video {
-    /* margin: 0; */
+    margin: 0;
     padding: 0;
     border: 0;
     outline: 0;
@@ -109,7 +110,11 @@ p {
 }
 
 
-/* Main Visual - 1.Menu Button 2.Main Visual 3.Navi Menu 4.Responsive
+/* Main Visual 
+1.Menu Button
+2.Main Visual
+3.Navi Menu
+4.Responsive
 ===================================================================*/
 
 /* 1.Menu Button - Styling */
@@ -145,6 +150,7 @@ p {
     color: #fff;
     background-color: #0dac67;
 }
+
 
 /* Menu Button - Layout */
 
@@ -225,6 +231,7 @@ p {
     margin-right: 0;
 }
 
+
 /* Navi Menu - Styling */
 
 .click {
@@ -302,10 +309,12 @@ p {
         height: auto;
         align-items: flex-end;
     }
+
     h1 {
         font-size: .7rem;
         margin: 1.6rem 0 .3rem 0;
     }
+
     .title-name {
         margin-bottom: .4rem;
         font-size: .8rem;
@@ -319,10 +328,12 @@ p {
     .header-nav-item {
         padding: .48rem 0 0 0;
     }
+
     .click {
         padding: .6rem 1.2rem;
         font-size: .75rem;
     }
+
     .click::after { 
         display: none;
     }
@@ -339,6 +350,7 @@ p {
         text-align: center;
         overflow: hidden;
     }
+
     .Menu-Button span {
         position: absolute;
         top: 51%;
@@ -359,118 +371,114 @@ p {
 
 
 #about {
-    background-image: url(../images/Wave-01.svg);
-    background-repeat: no-repeat;
-    background-position: cover;
     position: relative;
+    background-image: url(../images/Wave-01.svg);
+    width: 100vw;
     background-size: 100%;
     padding: 150px 0 150px;
+    background-repeat: no-repeat;
 }
-/* background size でカバーが正しい*/
 
 #about::before {
     content: attr(data-eng);
     position: absolute;
+    top: -4px;
+    right: 0px;
     font-family: 'chelsea-market-open', sans-serif;
     font-weight: 400;
     font-style: normal;
     color: #fff;
     font-size: 14rem;
-    top: -4px;
-    right: 0px;
     opacity: .7
 }
 
 .about-inner {
+    position: relative;
+    max-width: 1080px;
     width: 80%;
     height: auto;
-    max-width: 1080px;
-    margin: 0 auto;
-    position: relative;
     top: 100px;
+    margin: 0 auto;
 }
 
 .a-h1 {
-    margin: 0 auto;
     display: inline-block;
     padding: 3rem 0 0 0;
+    margin: 0 auto;
 }
 
 .a-content{
-    /*width: 80%;*/
-    margin-left: 20%;
+    display: block;
     border: 1px solid #333;
     padding: 3.5rem 3rem 1.5rem 3rem;
+    margin-left: 20%;
     margin-top: -3.4rem;
-    display: block;
 }
 
 .a-inner {}
 
 .a-copy {
-    text-align: left;
     padding-bottom: 1rem;
+    text-align: left;
 }
 
 .a-text {
+    float: left;
     width: 50%;
     height: auto;
     margin: 0 5% 0 0;
-    float: left;
-    letter-spacing: 0.04em;
-    line-height: 2;
     font-size: .9rem;
+    line-height: 2;
+    letter-spacing: 0.04em;
 }
 
 .a-image01 {
+    display: inline-block;
     width: 45%;
     height: auto;
-    display: inline-block;
 }
 
 
 /* 2.Style = Consept */
 
 #style {
-    background-image: url(../images/wave-02.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
-    margin-top: 300px;
     width: 100vw;
     height: 90vh;
+    margin-top: 300px;
+    background-image: url(../images/wave-02.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
     z-index: 1;
 }
 
 .style-inner {
+    max-width: 1080px;
     width: 80%;
     height: auto;
-    max-width: 1080px;
     margin: 0 auto;
     z-index: 0;
 }
-/*a-innerはrelative*/
-
 
 #style::before {
     content: attr(data-eng);
     position: absolute;
+    top: -4%;
+    right: 0px;
     font-family: 'chelsea-market-open', sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #fff;
     font-size: 14rem;
-    top: -4%;
-    right: 0px;
-    opacity: .7;
     letter-spacing: 0.03em;
+    color: #fff;
+    opacity: .7;
     z-index: -1;
 }
 
 .s-h2 {
     display: block;
     padding: 7rem 0 3rem 0;
-    text-align: left
+    text-align: left;
 }
 
 .s-list-wrap {
@@ -485,19 +493,19 @@ p {
 }
 
 .s-set {
-    margin: 0 11% 0 0;
-    position: relative;
     display: inline-block;
+    position: relative;
+    margin: 0 11% 0 0;
 }
 
 .s-set::before {
     content: "";
     position: absolute;
-    border-right: 1px solid #0dac67;
-    top: 90px;
+    top: 106px;
     width: 1px;
-    height: 190px;
+    height: 140px;
     margin: 0 0 0 -50px
+    border-right: 1px solid #0dac67;
 }
 
 .s-set:first-child::before {
@@ -531,7 +539,79 @@ p {
 }
 
 
+/* 3.News */
 
 #news {
+    position: relative;
+    background-image: url(../images/wave-03.svg);
+    background-size: calc(70vw + 110px);
+    width: 100vw;
+    background-position: right;
+    background-repeat: no-repeat;
     margin-top: 10rem;
+    z-index: -2;
+}
+
+#news::before {
+    content: attr(data-eng);
+    position: absolute;
+    top: 5%;
+    right: 0px;
+    font-family: 'chelsea-market-open', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14rem;
+    letter-spacing: 0.03em;
+    color: #fff;
+    opacity: .7;
+    z-index: -1;
+}
+
+.news-inner {
+    max-width: 1080px;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    padding: 6rem 0 12rem;
+}
+
+.n-h2 {
+    display: block;
+    padding-top: 7rem;
+    text-align: left;
+}
+
+.archive {
+    width: 50%;
+    margin: 2rem auto;
+
+}
+
+.archive-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 auto;
+    align-items: stretch;
+    width: 100%;
+}
+
+.news-title {
+    flex-basis: 30%;
+    margin-bottom: 0.2rem;
+    padding: 0;
+}
+
+.news-date {
+    flex-basis: 70%;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+.archive-all {
+    display: block;
+    text-align: right;
+}
+
+address {
+    font-style:normal;
 }
