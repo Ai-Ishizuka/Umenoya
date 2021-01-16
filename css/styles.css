@@ -29,11 +29,6 @@ Author URI: http://
     font-size: 20px;
 }
 
-body {
-    font-family: 'YakuHanJP', 'Noto Sans JP',
-    'chelsea-market-open', sans-serif;
-}
-
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -64,7 +59,7 @@ h2, h3 {
     margin-top: 0;
     line-height: 1.4;
     letter-spacing: 0.1rem;
-    text-align: center;
+    text-align: left;
 }
 
 h2 {
@@ -73,8 +68,8 @@ h2 {
 }
 
 body {
-    font-family: 'Noto Sans JP',
-    'Open Sans', sans-serif;
+    font-family: 'YakuHanJP_Noto', 'Noto Sans JP',
+    'chelsea-market-open', sans-serif;
     font-weight: 400;
     color: #333;
     background-color: #fff;
@@ -373,10 +368,10 @@ p {
 #about {
     position: relative;
     background-image: url(../images/Wave-01.svg);
+    background-repeat: no-repeat;
     width: 100vw;
     background-size: 100%;
     padding: 150px 0 150px;
-    background-repeat: no-repeat;
 }
 
 #about::before {
@@ -529,6 +524,7 @@ p {
     margin-bottom: 20px;
     padding: .9rem .7rem .9rem .7rem;
     background-color: #fff;
+    text-align: center;
     font-weight: bold;
 }
 
@@ -544,11 +540,11 @@ p {
 #news {
     position: relative;
     background-image: url(../images/wave-03.svg);
-    background-size: calc(70vw + 110px);
-    width: 100vw;
     background-position: right;
     background-repeat: no-repeat;
-    margin-top: 10rem;
+    background-size: calc(70vw + 110px);
+    width: 100vw;
+    margin-top: 5rem;
     z-index: -2;
 }
 
@@ -612,6 +608,167 @@ p {
     text-align: right;
 }
 
+
+/* 4.Access */
+
 address {
-    font-style:normal;
+    font-style: normal;
+}
+
+#access {
+    position: relative;
+    background-image: url(../images/wave-04.svg);
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 80vh;
+    background-size: cover;
+}
+
+#access::before {
+    content: attr(data-eng);
+    position: absolute;
+    top: -4px;
+    right: 0px;
+    font-family: 'chelsea-market-open', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+    font-size: 14rem;
+    opacity: .7
+}
+
+.ac-h2-text-map {
+    max-width: 1080px;
+    width: 80%;
+    height: auto;
+    top: 100px;
+    margin: 0 auto;
+    margin-top: 6rem;
+}
+
+.ac-text-map {
+    padding-top: 190px;
+    display: flex;
+    align-items: flex-start;
+    justify-content:space-around;
+    flex-wrap: nowrap;
+}
+
+.ac-h2 {
+    position: relative;
+    text-align: left;
+    bottom: 20px;
+}
+
+.ac-h3 {
+    display: block;
+    padding-bottom: 56px;
+    font-size: .88rem;
+    letter-spacing: .06rem;
+    font-weight: bold;
+}
+
+address {
+    padding-bottom: 3px;
+}
+
+.call {
+    padding-top: 20px;
+}
+
+.call a {
+    padding-left: 10px;
+}
+
+.access-text p {
+    display: block;
+}
+
+.attention-1,.attention-2,.attention-3 {
+    font-size: 0.74rem;
+    letter-spacing: .06em;
+    line-height: 1.6;
+}
+
+.attention-1 {
+    padding-bottom: 26px;
+}
+
+.attention-2 {
+    display: block;
+    padding-top: 14px;
+}
+
+.attention-2 p,a {
+    display: inline-block;
+}
+
+.attention-2-link {
+    text-decoration: underline;
+    padding-left: 6px;
+}
+
+.info-set {
+    display: table-cell;
+    width: 380px;
+    line-height: 2.4;
+    padding: 12px;
+    border: 2.6px solid #eeeeef;
+    border-radius: 24px;
+    background-color: #fff;
+    font-size: .8rem;
+    letter-spacing: .04rem;
+    font-weight: 200;
+}
+
+.info-title {
+    padding-right:20px;
+    float: left;
+    clear: both;
+    text-align: right;
+    width: 30%;
+}
+
+.info-content {
+    display: table-cell;
+    border-left: 4px solid #eeeeef;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.gmap {
+    overflow: hidden;
+    padding-left: 70px;
+    border-radius: 26px;
+}
+
+
+/* 5.Footer */
+
+#footer {
+    max-width: 1080px;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px 0px 40px 0;
+}
+
+.footer-set {
+    text-align: center;
+}
+
+.f-logo {
+    display: inline-block;
+    margin: 14px;
+}
+
+.copyright {
+    display: block;
+    font-size: .6rem;
+    letter-spacing: .04rem;
+    padding-top: 1px;
+}
+
+.cr-text {
+    display: inline-block;
 }
