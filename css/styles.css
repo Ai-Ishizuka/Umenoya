@@ -1,10 +1,6 @@
 @charset "utf-8"
 
 /*
-Theme Name:  Ai Ishizuka
-Theme URI: http://
-Description: AI Ishizuka
-Version: 1.4
 Author: STUDIO702
 Author URI: http://	
 */
@@ -25,63 +21,47 @@ Author URI: http://
 
 /* Base Setting
 ===================================================================*/
-:root {
-    font-size: 20px;
+
+
+/* Regulation-------------------------------------*/
+
+body {
+    width:100%;
+    height:100%;
+	font-style: inherit;
+	font-family:'YakuHanJP_Noto', 'Noto Sans JP', 'chelsea-market-open', sans-serif;
+	font-weight: 500;
+	line-height: 1em;
+	letter-spacing: 0.02em;
+	background: rgb(255,255,255,1);
+	color: rgb(0,0,0,1);
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+  	-webkit-font-feature-settings: "palt";
+	font-feature-settings: "palt";
 }
 
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
-html, body, div, span, object, iframe, h1, h2, h3,
-h4, h5, h6, p, a, blockquote, pre, abbr, address,
-cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong,
-sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label,
-legend, table, caption, tbody, tfoot, thead, tr, th, td, article,
-aside, canvas, details, figcaption, figure, footer, header,
-menu, nav, section, summary, time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
+:root {
+    font-size: 20px;
 }
 
 h1 {
     font-size: .9rem;
     margin: 4rem 0 .6rem 0;
-    letter-spacing: .1rem;
-    font-weight: normal;
+    letter-spacing: .16rem;
 }
+
 h2, h3 {
-    margin-top: 0;
-    line-height: 1.4;
     letter-spacing: 0.1rem;
     text-align: left;
 }
 
 h2 {
-    color: #40220f;
     font-size: 1.5rem;
-}
-
-body {
-    font-family: 'YakuHanJP_Noto', 'Noto Sans JP',
-    'chelsea-market-open', sans-serif;
-    font-weight: 400;
-    color: #333;
-    background-color: #fff;
-}
-
-::selection {
-    background: #c8c9ca;
-    color: #000;
-}
-
-::-moz-selection {
-    background: #ffe8d1;
 }
 
 a {
@@ -104,15 +84,23 @@ p {
     text-align: justify;
 }
 
+/* Selection */
+
+::selection {
+    background: #c8c9ca;
+    color: #000;
+}
+
+::-moz-selection {
+    background: #ffe8d1;
+}
+
 
 /* Main Visual 
-1.Menu Button
-2.Main Visual
-3.Navi Menu
-4.Responsive
+    -1.Menu Button 2.Main Visual 3.Navi Menu 4.Responsive for phone
 ===================================================================*/
 
-/* 1.Menu Button - Styling */
+/* 1.Menu Button -------------------------------------*/
 
 .Menu-Button {
     position: relative;
@@ -147,7 +135,7 @@ p {
 }
 
 
-/* Menu Button - Layout */
+/* Layout */
 
 .Menu-Button {
     position: absolute;
@@ -156,8 +144,7 @@ p {
     z-index: 1;
 }
 
-
-/* 2.Main visual */
+/* 2.Main visual -------------------------------------*/
 
 .Wrapper {
     position: relative;
@@ -206,8 +193,7 @@ p {
     letter-spacing: .1rem;
 }
 
-
-/* 3.Navi Menu - Layout */
+/* 3.Navi Menu ------------------------------------*/
 
 .header-nav-items {
     display: flex;
@@ -218,7 +204,7 @@ p {
     padding: 0;
 }
 
-.header-nav-item{
+.header-nav-item {
     padding: .8rem .5rem 0 0;
 }
 
@@ -227,7 +213,7 @@ p {
 }
 
 
-/* Navi Menu - Styling */
+/* Styling */
 
 .click {
     display: block;
@@ -271,7 +257,7 @@ p {
 }
 
 
-/* 4.Responsive - for smartphone */
+/* 4.Responsive - for Phone -------------------------------------*/
 
 @media screen and (max-width: 640px) {
     
@@ -359,10 +345,11 @@ p {
 }
 
 
-/* Content - 1.About 2.Style
+/* Contents 
+    - 1.About 2.Style 3.News 4.Access 5.footer
 ===================================================================*/
 
-/* 1.About */
+/* 1.About -------------------------------------*/
 
 
 #about {
@@ -414,27 +401,27 @@ p {
 
 .a-copy {
     padding-bottom: 1rem;
-    text-align: left;
 }
 
 .a-text {
     float: left;
     width: 50%;
     height: auto;
-    margin: 0 5% 0 0;
-    font-size: .9rem;
-    line-height: 2;
+    font-size: .88rem;
+    line-height: 2.46;
     letter-spacing: 0.04em;
 }
 
 .a-image01 {
     display: inline-block;
     width: 45%;
+    padding-left: 60px;
     height: auto;
 }
 
 
-/* 2.Style = Consept */
+
+/* 2.Style = concept -------------------------------------*/
 
 #style {
     position: relative;
@@ -535,7 +522,7 @@ p {
 }
 
 
-/* 3.News */
+/* 3.News -------------------------------------*/
 
 #news {
     position: relative;
@@ -609,7 +596,7 @@ p {
 }
 
 
-/* 4.Access */
+/* 4.Access -------------------------------------*/
 
 address {
     font-style: normal;
@@ -739,11 +726,11 @@ address {
 .gmap {
     overflow: hidden;
     padding-left: 70px;
-    border-radius: 26px;
 }
 
 
-/* 5.Footer */
+
+/* Footer -------------------------------------*/
 
 #footer {
     max-width: 1080px;
