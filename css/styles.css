@@ -23,22 +23,27 @@ Author URI: http://
 ===================================================================*/
 
 
-/* Regulation-------------------------------------*/
+/* Regulation------------------'chelsea-market-open'-------------------*/
+
 
 body {
-    width:100%;
-    height:100%;
+    width:100vw;
+    height:auto;
+    margin: 0 auto;
 	font-style: inherit;
-	font-family:'YakuHanJP_Noto', 'Noto Sans JP', 'chelsea-market-open', sans-serif;
 	font-weight: 500;
 	line-height: 1em;
-	letter-spacing: 0.02em;
+    letter-spacing: 0.02em;
 	background: rgb(255,255,255,1);
 	color: rgb(0,0,0,1);
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
   	-webkit-font-feature-settings: "palt";
 	font-feature-settings: "palt";
+}
+
+body {
+    font-family: 'YakuHanJP_Noto', 'Noto Sans JP', "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",Meiryo,Verdana,sans-serif;
 }
 
 *, *::before, *::after {
@@ -50,9 +55,22 @@ body {
 }
 
 h1 {
-    font-size: .9rem;
+    font-size: .83rem;
     margin: 4rem 0 .6rem 0;
     letter-spacing: .16rem;
+}
+
+h2 {
+    display: block;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: ;
+    letter-spacing: ;
 }
 
 h2, h3 {
@@ -60,28 +78,57 @@ h2, h3 {
     text-align: left;
 }
 
-h2 {
-    font-size: 1.5rem;
+p {
+    font-size: 0.76rem;
+    font-weight: 400;   
+    text-align: justify;
+    letter-spacing: .06em;
+    line-height: 2.1em;
 }
 
 a {
+    letter-spacing: .06em;
     color: #257a01;
     text-decoration: none;
 }
 
 a:hover { 
-    color: #257a01;
-    opacity: 0.8s; }
+    color: #28894B;
+    opacity: 0.8s;
+}
 
 a img {
     border: none;
     height: auto;
 }
 
-p {
-    margin-top: 0;
-    margin-bottom: 0rem;
-    text-align: justify;
+.back-text::before {
+    content: attr(data-eng);
+    position: absolute;
+    right: 0px;
+    font-family: 'chelsea-market-open', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14rem;
+    letter-spacing: 0.03em;
+    color: #fff;
+    opacity: .7;
+    z-index: -1;
+}
+
+#about,#style,#news,#access {
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.x {
+    max-width: 1080px;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
 }
 
 /* Selection */
@@ -92,9 +139,8 @@ p {
 }
 
 ::-moz-selection {
-    background: #ffe8d1;
+    background: #fff;
 }
-
 
 /* Main Visual 
     -1.Menu Button 2.Main Visual 3.Navi Menu 4.Responsive for phone
@@ -107,11 +153,11 @@ p {
     display: block;
     text-decoration: none;
     background-color: #cfeee1;
-    color: #0a814d;
+    color: #257a01;
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 1.6px solid #0dac67;
+    border: 1.6px solid #257a01;
     text-align: center;
     overflow: hidden;
     transition: .4s;
@@ -122,7 +168,7 @@ p {
     top: 51%;
     left: 21.5%;
     line-height: 1.6;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 1.1rem;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -131,9 +177,8 @@ p {
 .Menu-Button:hover {
     display: block;
     color: #fff;
-    background-color: #0dac67;
+    background-color: #257a01;
 }
-
 
 /* Layout */
 
@@ -189,7 +234,7 @@ p {
     display: block;
     margin-bottom: .8rem;
     font-size: .8rem;
-    font-weight: bold;
+    font-weight: 700;
     letter-spacing: .1rem;
 }
 
@@ -223,7 +268,7 @@ p {
     background-color: #fff;
     color: #0dac67;
     font-size: .8rem;
-    font-weight: bolder;
+    font-weight: 500;
     letter-spacing: .1rem;
 }
 
@@ -353,114 +398,84 @@ p {
 
 
 #about {
-    position: relative;
     background-image: url(../images/Wave-01.svg);
-    background-repeat: no-repeat;
-    width: 100vw;
     background-size: 100%;
-    padding: 150px 0 150px;
-}
-
-#about::before {
-    content: attr(data-eng);
-    position: absolute;
-    top: -4px;
-    right: 0px;
-    font-family: 'chelsea-market-open', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #fff;
-    font-size: 14rem;
-    opacity: .7
+    padding-top: 150px;
 }
 
 .about-inner {
     position: relative;
-    max-width: 1080px;
-    width: 80%;
-    height: auto;
     top: 100px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
 }
 
-.a-h1 {
+.back-text[alt="about"]::before {
+    top: -10px;
+}
+
+.a-h2 {
     display: inline-block;
-    padding: 3rem 0 0 0;
-    margin: 0 auto;
+    margin-top: 64px;
 }
 
-.a-content{
-    display: block;
+.a-inner {
     border: 1px solid #333;
-    padding: 3.5rem 3rem 1.5rem 3rem;
-    margin-left: 20%;
-    margin-top: -3.4rem;
+    padding: 60px;
+    width: 75%;
 }
-
-.a-inner {}
 
 .a-copy {
-    padding-bottom: 1rem;
+    display: block;
+    margin-top: 20px;
+}
+
+.a-text-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
 }
 
 .a-text {
-    float: left;
     width: 50%;
     height: auto;
-    font-size: .88rem;
+    font-size: .86rem;
     line-height: 2.46;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.06em;
 }
 
-.a-image01 {
-    display: inline-block;
-    width: 45%;
-    padding-left: 60px;
+figure [src$="img-about01.jpg"] {
+    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
-
+.a-store-img {
+    padding-left: 60px;
+}
 
 /* 2.Style = concept -------------------------------------*/
 
 #style {
-    position: relative;
-    width: 100vw;
     height: 90vh;
-    margin-top: 300px;
     background-image: url(../images/wave-02.svg);
     background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 1;
+
 }
 
 .style-inner {
-    max-width: 1080px;
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-    z-index: 0;
 }
 
-#style::before {
-    content: attr(data-eng);
-    position: absolute;
-    top: -4%;
-    right: 0px;
-    font-family: 'chelsea-market-open', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 14rem;
-    letter-spacing: 0.03em;
-    color: #fff;
-    opacity: .7;
-    z-index: -1;
+.back-text[alt="style"]::before {
+    top: -10px;
 }
 
 .s-h2 {
-    display: block;
-    padding: 7rem 0 3rem 0;
-    text-align: left;
+    padding-top: 120px;
 }
 
 .s-list-wrap {
@@ -471,27 +486,31 @@ p {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    margin: 0 5rem 0 5rem;
+    margin: 8% 10%;
 }
 
 .s-set {
     display: inline-block;
     position: relative;
-    margin: 0 11% 0 0;
+}
+
+.s-text {
+    margin: 0% 16% 0%;
 }
 
 .s-set::before {
     content: "";
     position: absolute;
-    top: 106px;
+    top: 126px;
     width: 1px;
-    height: 140px;
-    margin: 0 0 0 -50px
+    height: 110px;
+    margin-right: -50px;
     border-right: 1px solid #0dac67;
 }
 
 .s-set:first-child::before {
     border-right: none;
+    margin: 0;
 }
 
 .s-icon {
@@ -508,73 +527,51 @@ p {
 }
 
 .s-set .s-text h3 {
+    display: block;
     margin-bottom: 20px;
-    padding: .9rem .7rem .9rem .7rem;
-    background-color: #fff;
+    padding: 26px 18px 12px 18px;
     text-align: center;
+    line-height: 1.4;
     font-weight: bold;
+    background-color: #fff;
+    border-radius: 100px 100px 4px 4px;
 }
 
-.s-set .s-text p {
-    font-size: 0.78rem;
-    letter-spacing: .06em;
-    line-height: 1.7;
-}
 
 
 /* 3.News -------------------------------------*/
 
 #news {
-    position: relative;
     background-image: url(../images/wave-03.svg);
     background-position: right;
-    background-repeat: no-repeat;
     background-size: calc(70vw + 110px);
-    width: 100vw;
-    margin-top: 5rem;
-    z-index: -2;
 }
 
-#news::before {
-    content: attr(data-eng);
-    position: absolute;
-    top: 5%;
-    right: 0px;
-    font-family: 'chelsea-market-open', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 14rem;
-    letter-spacing: 0.03em;
-    color: #fff;
-    opacity: .7;
-    z-index: -1;
+.back-text[alt="news"]::before {
+    top: 18%;
 }
 
 .news-inner {
-    max-width: 1080px;
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-    padding: 6rem 0 12rem;
+    position: relative;
+    top: 36%;
 }
 
 .n-h2 {
-    display: block;
-    padding-top: 7rem;
-    text-align: left;
+    margin-bottom: 26px;
 }
 
 .archive {
     width: 50%;
-    margin: 2rem auto;
-
+    margin:0 auto 46px;
 }
 
 .archive-list {
     display: flex;
     flex-wrap: wrap;
     flex: 1 0 auto;
-    align-items: stretch;
+    line-height: 2;
+    font-size: .88rem;
+    letter-spacing: 0.03em;
     width: 100%;
 }
 
@@ -590,109 +587,75 @@ p {
     padding: 0;
 }
 
-.archive-all {
-    display: block;
-    text-align: right;
+.archive-see-all {
+    margin-left: 90%;
+    font-size: .88rem;
 }
 
 
 /* 4.Access -------------------------------------*/
 
-address {
-    font-style: normal;
-}
-
 #access {
-    position: relative;
     background-image: url(../images/wave-04.svg);
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 80vh;
     background-size: cover;
+    height: 80vh;
 }
 
-#access::before {
-    content: attr(data-eng);
-    position: absolute;
-    top: -4px;
-    right: 0px;
-    font-family: 'chelsea-market-open', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #fff;
-    font-size: 14rem;
-    opacity: .7
-}
-
-.ac-h2-text-map {
-    max-width: 1080px;
-    width: 80%;
-    height: auto;
-    top: 100px;
-    margin: 0 auto;
-    margin-top: 6rem;
+.back-text[alt="access"]::before {
 }
 
 .ac-text-map {
-    padding-top: 190px;
     display: flex;
     align-items: flex-start;
     justify-content:space-around;
     flex-wrap: nowrap;
-}
-
-.ac-h2 {
-    position: relative;
-    text-align: left;
-    bottom: 20px;
+    margin-top: 180px;
 }
 
 .ac-h3 {
-    display: block;
-    padding-bottom: 56px;
     font-size: .88rem;
-    letter-spacing: .06rem;
-    font-weight: bold;
+    letter-spacing: .06em;
+    font-weight: 500;
 }
 
 address {
-    padding-bottom: 3px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 20px;
 }
 
-.call {
-    padding-top: 20px;
+.address-text {
+    margin-top: 50px;
+    font-size: .84rem;
+    line-height: 2;
+    letter-spacing: .03em;
 }
 
-.call a {
-    padding-left: 10px;
+.address-text a {
+    margin-left: 6px;
 }
 
 .access-text p {
     display: block;
 }
 
-.attention-1,.attention-2,.attention-3 {
-    font-size: 0.74rem;
-    letter-spacing: .06em;
-    line-height: 1.6;
+.note-set {
+    margin-top: 18px;
 }
 
-.attention-1 {
-    padding-bottom: 26px;
+.point {
+    font-size: .7rem;
+    letter-spacing: .1em;
+    line-height: 2em;
 }
 
-.attention-2 {
-    display: block;
-    padding-top: 14px;
-}
-
-.attention-2 p,a {
-    display: inline-block;
-}
-
-.attention-2-link {
+.note-2-link {
+    margin-left: 6px;
     text-decoration: underline;
-    padding-left: 6px;
+    padding-bottom: -18px;
+    text-decoration-style: solid;
+    text-decoration-color: inherit;
+    text-underline-offset: .25em;
 }
 
 .info-set {
@@ -704,8 +667,6 @@ address {
     border-radius: 24px;
     background-color: #fff;
     font-size: .8rem;
-    letter-spacing: .04rem;
-    font-weight: 200;
 }
 
 .info-title {
@@ -714,18 +675,27 @@ address {
     clear: both;
     text-align: right;
     width: 30%;
+    letter-spacing: .04rem;
 }
 
 .info-content {
     display: table-cell;
     border-left: 4px solid #eeeeef;
     text-align: left;
-    padding-left: 20px;
+    padding-left: 20px;    
+    letter-spacing: .07em;
 }
 
 .gmap {
     overflow: hidden;
     padding-left: 70px;
+}
+
+.as::before {
+    content: "※";
+}
+.hy::before {
+    content: "- ";
 }
 
 
@@ -752,10 +722,5 @@ address {
 .copyright {
     display: block;
     font-size: .6rem;
-    letter-spacing: .04rem;
-    padding-top: 1px;
-}
-
-.cr-text {
-    display: inline-block;
+    letter-spacing: .1em;
 }
