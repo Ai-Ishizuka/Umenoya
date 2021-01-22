@@ -1,49 +1,36 @@
-@charset "utf-8"
+@charset "utf-8";
 
-/*
-Author: STUDIO702
-Author URI: http://	
-*/
+/* Author: Ai Ishizuka by Studio702
+Author URI: http://	 */
 
 /*
 ===== CONTENTS =====================================================
 
 	Index:
-  - Base Style
-  - 
+  - 1: Base Setting
+  - 2: Main Visual
+  - 3: Main Contents
   
-===================================================================*/
+===================================================================
 
 
-
-/* 1: Base Style Setting
 ----------------------------------------------------------------------------------------------*/
 
-/* Base Setting
+
+/* 1: Base Setting
 ===================================================================*/
 
 
-/* Regulation------------------'chelsea-market-open'-------------------*/
+/* Regulation-------------------------------------*/
 
-
-body {
-    width:100vw;
-    height:auto;
-    margin: 0 auto;
-	font-style: inherit;
-	font-weight: 500;
-	line-height: 1em;
-    letter-spacing: 0.02em;
-	background: rgb(255,255,255,1);
-	color: rgb(0,0,0,1);
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-  	-webkit-font-feature-settings: "palt";
-	font-feature-settings: "palt";
-}
-
-body {
-    font-family: 'YakuHanJP_Noto', 'Noto Sans JP', "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",Meiryo,Verdana,sans-serif;
+html,body {
+    font-family: 'YakuHanJP_Noto', 'Noto Sans JP', "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",Meiryo,Verdana,Arial,sans-serif;
+    font-style: normal;
+    font-weight: 400;    
+    font-feature-settings: "palt";
+    text-rendering: optimizeLegibility;
+    background: #fff;
+    color: #222;
 }
 
 *, *::before, *::after {
@@ -54,10 +41,44 @@ body {
     font-size: 20px;
 }
 
-h1 {
+/* Big Layout */
+
+.x {
+    max-width: 1080px;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#about,#style,#news,#access {
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+.b-txt::before {
+    content: attr(data-eng);
+    position: absolute;
+    right: 0px;
+    font-family: 'chelsea-market-open', Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14rem;
+    letter-spacing: .03em;
+    color: #fff;
+    opacity: .7;
+    z-index: -1;
+}
+
+
+/* Base Styling */
+
+h1 {    
+    margin: 60px 0 6px 0;
     font-size: .83rem;
-    margin: 4rem 0 .6rem 0;
-    letter-spacing: .16rem;
+    letter-spacing: .16em;
 }
 
 h2 {
@@ -68,20 +89,19 @@ h2 {
 
 h3 {
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 500;
     line-height: ;
     letter-spacing: ;
 }
 
 h2, h3 {
-    letter-spacing: 0.1rem;
     text-align: left;
+    letter-spacing: .1em;
 }
 
 p {
-    font-size: 0.76rem;
-    font-weight: 400;   
     text-align: justify;
+    font-size: .76rem;
     letter-spacing: .06em;
     line-height: 2.1em;
 }
@@ -102,34 +122,6 @@ a img {
     height: auto;
 }
 
-.back-text::before {
-    content: attr(data-eng);
-    position: absolute;
-    right: 0px;
-    font-family: 'chelsea-market-open', sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 14rem;
-    letter-spacing: 0.03em;
-    color: #fff;
-    opacity: .7;
-    z-index: -1;
-}
-
-#about,#style,#news,#access {
-    background-repeat: no-repeat;
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;
-}
-
-.x {
-    max-width: 1080px;
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-}
 
 /* Selection */
 
@@ -139,28 +131,133 @@ a img {
 }
 
 ::-moz-selection {
-    background: #fff;
+    background: #c8c9ca;
+    color: #000;
 }
 
-/* Main Visual 
-    -1.Menu Button 2.Main Visual 3.Navi Menu 4.Responsive for phone
+
+
+/* 2: Main Visual 
+    -1.Main Visual 2.Responsive for phone
 ===================================================================*/
 
-/* 1.Menu Button -------------------------------------*/
+
+/* 1.Main visual -------------------------------------*/
+
+
+.title-set {
+    line-height: 1.4;
+}
+
+.title-name {
+    display: block;
+    margin-bottom: .8rem;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+}
+
+#MV {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+}
+
+.top-background {
+    width: 50vw;
+    height: 100vh;
+    background: url("../images/MV_background.svg") repeat;
+    background-position: -5px 120px;
+    background-size: 100%;
+    order: 2;
+}
+
+.top {
+    width: 30%;
+    height: auto;
+    order: 1;
+    z-index: 1;
+}
+
+/* Navi Menu */
+
+.header-nav-items {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    list-style-position: outside;
+}
+
+.header-nav-item {
+    padding: .8rem .5rem 0 0;
+}
+
+.header-nav-item:last-child {
+    margin-right: 0;
+}
+
+/* Navi Menu - Styling */
+
+.click {
+    display: block;
+    position: relative;
+    padding: 14px 40px 14px 30px;
+    border-radius: 30px;
+    border: 2px solid #dcdcdc;
+    font-size: .8rem;
+    font-weight: 500;
+    letter-spacing: .1rem;
+    background-color: #fff;
+    color: #257a01;
+}
+
+.click::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 20.88px;
+    right: 20px;
+    width: 9px;
+    height: 9px;
+    border-top: 2px solid #257a01;
+    border-right: 2px solid #257a01;
+    transform: translateX(-50%) rotate(135deg);
+}
+
+.click:hover::after {
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transition: .3s;
+}
+
+
+.click:hover {
+    color: #fff;
+    background-color: #257a01;
+    border: 2px solid #257a01;
+    transition: .3s;
+}
+
+/* Food Menu Pop-Up */
 
 .Menu-Button {
-    position: relative;
+    position: absolute;
     display: block;
-    text-decoration: none;
-    background-color: #cfeee1;
+    background-color: #f6f4ef;
     color: #257a01;
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 1.6px solid #257a01;
+    border: 2px solid #dcdcdc;
     text-align: center;
     overflow: hidden;
-    transition: .4s;
+    transition: .3s;
+    top: 100px;
+    right: 120px;
+    z-index: 1;
 }
 
 .Menu-Button span {
@@ -179,128 +276,6 @@ a img {
     color: #fff;
     background-color: #257a01;
 }
-
-/* Layout */
-
-.Menu-Button {
-    position: absolute;
-    top: 100px;
-    right: 120px;
-    z-index: 1;
-}
-
-/* 2.Main visual -------------------------------------*/
-
-.Wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    margin-bottom: 10%;
-}
-
-.top {
-    width: 50%;
-    z-index: 1;
-}
-
-.top-background {
-    position: relative;
-    width: 50%;
-    height: 100vh;
-    overflow: hidden;   
-}
-
-.top-background-inner {
-    background: url("../images/MV_background.svg") repeat;
-    background-size: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100vh;
-    vertical-align: bottom;
-    transform: translate(-50%, -50%);
-}
-
-.title-set {
-    line-height: 1.4;
-    margin: 0 0 0 8.6rem;
-    width: 400px;
-}
-
-.title-name {
-    display: block;
-    margin-bottom: .8rem;
-    font-size: .8rem;
-    font-weight: 700;
-    letter-spacing: .1rem;
-}
-
-/* 3.Navi Menu ------------------------------------*/
-
-.header-nav-items {
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-    list-style-position: outside;
-    margin: 0;
-    padding: 0;
-}
-
-.header-nav-item {
-    padding: .8rem .5rem 0 0;
-}
-
-.header-nav-item:last-child {
-    margin-right: 0;
-}
-
-
-/* Styling */
-
-.click {
-    display: block;
-    padding: .7rem 1.4rem;
-    border-radius: 1.5rem;
-    border: 2.2px solid #dcdcdc;
-    background-color: #fff;
-    color: #0dac67;
-    font-size: .8rem;
-    font-weight: 500;
-    letter-spacing: .1rem;
-}
-
-.click:hover {
-    color: #0dac67;
-    background-color: #fff;
-    border: 2.2px solid #dcdcdc;
-}
-
-.click {
-    position: relative;
-    display: inline-block;
-    text-decoration: none;
-}
-
-.click::after {
-    position: absolute;
-    bottom: 10px;
-    left: 0px;
-    content: '';
-    width: 100%;
-    height: 1.5px;
-    background: #888;
-    transform: scale(0, 1);
-    transform-origin: center top;
-    transition: transform .3s;
-}
-
-.click:hover::after {
-    transform: scale(0.3, 1);
-}
-
 
 /* 4.Responsive - for Phone -------------------------------------*/
 
@@ -360,14 +335,10 @@ a img {
         font-size: .75rem;
     }
 
-    .click::after { 
-        display: none;
-    }
-
     .Menu-Button {
         display: block;
         text-decoration: none;
-        background-color: #289f67;
+        background-color: #257a01;
         color: #fff;
         border: none;
         width: 120px;
@@ -390,8 +361,9 @@ a img {
 }
 
 
-/* Contents 
+/* 3: Main Contents 
     - 1.About 2.Style 3.News 4.Access 5.footer
+    ** Each section has Responsive code@ **
 ===================================================================*/
 
 /* 1.About -------------------------------------*/
@@ -400,43 +372,43 @@ a img {
 #about {
     background-image: url(../images/Wave-01.svg);
     background-size: 100%;
-    padding-top: 150px;
+    margin-top: 150px;
 }
 
-.about-inner {
-    position: relative;
-    top: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: row;
-}
-
-.back-text[alt="about"]::before {
+.b-txt[alt="about"]::before {
     top: -10px;
 }
 
 .a-h2 {
-    display: inline-block;
     margin-top: 64px;
 }
 
+/* Contents start */
+
+.about-inner {
+    position: relative;
+    top: 250px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .a-inner {
-    border: 1px solid #333;
-    padding: 60px;
     width: 75%;
+    padding: 60px;
+    border: 1px solid #222;
 }
 
 .a-copy {
-    display: block;
     margin-top: 20px;
 }
 
 .a-text-img {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     margin-top: 16px;
 }
 
@@ -445,7 +417,7 @@ a img {
     height: auto;
     font-size: .86rem;
     line-height: 2.46;
-    letter-spacing: 0.06em;
+    letter-spacing: .06em;
 }
 
 figure [src$="img-about01.jpg"] {
@@ -458,19 +430,17 @@ figure [src$="img-about01.jpg"] {
     padding-left: 60px;
 }
 
+
 /* 2.Style = concept -------------------------------------*/
+
 
 #style {
     height: 90vh;
-    background-image: url(../images/wave-02.svg);
+    background-image: url(../images/wave-02-3.svg);
     background-size: cover;
-
 }
 
-.style-inner {
-}
-
-.back-text[alt="style"]::before {
+.b-txt[alt="style"]::before {
     top: -10px;
 }
 
@@ -478,39 +448,31 @@ figure [src$="img-about01.jpg"] {
     padding-top: 120px;
 }
 
-.s-list-wrap {
 
-}
+/* Contents start*/
 
 .s-list {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    margin: 8% 10%;
-}
-
-.s-set {
-    display: inline-block;
-    position: relative;
+    margin-top: 100px;
+    padding: 0 8%;
 }
 
 .s-text {
-    margin: 0% 16% 0%;
+    margin: 0 50px;
 }
 
 .s-set::before {
     content: "";
     position: absolute;
-    top: 126px;
-    width: 1px;
+    top: 40%;
     height: 110px;
-    margin-right: -50px;
-    border-right: 1px solid #0dac67;
+    border-right: 1px solid #257a01;
 }
 
 .s-set:first-child::before {
     border-right: none;
-    margin: 0;
 }
 
 .s-icon {
@@ -518,7 +480,8 @@ figure [src$="img-about01.jpg"] {
     align-items: center;
     justify-content: center;
     height: 170px;
-    margin-bottom: 30px;
+    width: auto;
+    padding-bottom: 10px;
 }
 
 .s-set .s-icon img {
@@ -527,16 +490,17 @@ figure [src$="img-about01.jpg"] {
 }
 
 .s-set .s-text h3 {
-    display: block;
-    margin-bottom: 20px;
-    padding: 26px 18px 12px 18px;
+    padding: 26px 18px 12px;
     text-align: center;
+    font-weight: 500;
     line-height: 1.4;
-    font-weight: bold;
     background-color: #fff;
     border-radius: 100px 100px 4px 4px;
 }
 
+.s-set .s-text p {
+    margin-top: 20px;
+}
 
 
 /* 3.News -------------------------------------*/
@@ -547,50 +511,56 @@ figure [src$="img-about01.jpg"] {
     background-size: calc(70vw + 110px);
 }
 
-.back-text[alt="news"]::before {
-    top: 18%;
+.b-txt[alt="news"]::before {
+    top: 230px;
 }
+
+/* Contents start */
+/* Opening, Closing hours */
 
 .news-inner {
     position: relative;
-    top: 36%;
-}
-
-.n-h2 {
-    margin-bottom: 26px;
+    top: 400px;
 }
 
 .archive {
     width: 50%;
-    margin:0 auto 46px;
+    height: 130px;
+    margin: 30px auto 0;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    background-color: #fff;
 }
 
 .archive-list {
     display: flex;
     flex-wrap: wrap;
-    flex: 1 0 auto;
-    line-height: 2;
     font-size: .88rem;
-    letter-spacing: 0.03em;
-    width: 100%;
+    letter-spacing: .03em;
+}
+
+.archive-list a {
+    padding: 8px 18px;
 }
 
 .news-title {
     flex-basis: 30%;
-    margin-bottom: 0.2rem;
-    padding: 0;
+    margin-top: 25px;
+    padding-left: 28px;
 }
 
 .news-date {
     flex-basis: 70%;
-    margin-bottom: 1rem;
-    padding: 0;
+    margin-top: 25px;
 }
 
-.archive-see-all {
+/*.archive-see-all {
+    display: inline-block;
+    padding: 8px;
     margin-left: 90%;
+    margin-top: 46px;
     font-size: .88rem;
-}
+}*/
 
 
 /* 4.Access -------------------------------------*/
@@ -601,66 +571,46 @@ figure [src$="img-about01.jpg"] {
     height: 80vh;
 }
 
-.back-text[alt="access"]::before {
+.ac-h3 {
+    font-size: 1.1rem;
+    letter-spacing: .08em;
 }
+
+
+/* Contents start */
 
 .ac-text-map {
     display: flex;
     align-items: flex-start;
-    justify-content:space-around;
     flex-wrap: nowrap;
+    justify-content:space-around;
     margin-top: 180px;
-}
-
-.ac-h3 {
-    font-size: .88rem;
-    letter-spacing: .06em;
-    font-weight: 500;
 }
 
 address {
     font-style: normal;
-    font-weight: 500;
-    margin-bottom: 20px;
 }
 
 .address-text {
-    margin-top: 50px;
+    margin-top: 30px;
     font-size: .84rem;
-    line-height: 2;
-    letter-spacing: .03em;
+    line-height: 1.8em;
 }
 
 .address-text a {
     margin-left: 6px;
 }
 
-.access-text p {
+.note-1 {
     display: block;
+    margin: 5px 0 20px;
 }
 
-.note-set {
-    margin-top: 18px;
-}
 
-.point {
-    font-size: .7rem;
-    letter-spacing: .1em;
-    line-height: 2em;
-}
-
-.note-2-link {
-    margin-left: 6px;
-    text-decoration: underline;
-    padding-bottom: -18px;
-    text-decoration-style: solid;
-    text-decoration-color: inherit;
-    text-underline-offset: .25em;
-}
+/* Opening, Closing hours */
 
 .info-set {
-    display: table-cell;
-    width: 380px;
+    width: 80%;
     line-height: 2.4;
     padding: 12px;
     border: 2.6px solid #eeeeef;
@@ -670,57 +620,89 @@ address {
 }
 
 .info-title {
-    padding-right:20px;
     float: left;
-    clear: both;
-    text-align: right;
     width: 30%;
+    padding-right:20px;
+    text-align: right;
     letter-spacing: .04rem;
 }
 
 .info-content {
     display: table-cell;
     border-left: 4px solid #eeeeef;
-    text-align: left;
     padding-left: 20px;    
     letter-spacing: .07em;
+    font-weight: 500;
 }
+
+.highlight {
+    background-color: #fffc82;
+}
+
+/* Notes */
+
+.note-set {
+    margin-top: 12px;
+    clear: both;
+}
+
+.point {
+    font-size: .7rem;
+    letter-spacing: .1em;
+    line-height: 1.65em;
+}
+
+.note-2-link {
+    margin-left: 6px;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #257a01;
+}
+
+.note-3 {
+    margin-bottom: 12px;
+}
+
+.bold {
+    font-weight: 500;
+}
+
+.as::before {
+    content: "※";
+}
+
+.hy::before {
+    content: "- ";
+}
+
+
+/* Google-Map */
 
 .gmap {
     overflow: hidden;
     padding-left: 70px;
 }
 
-.as::before {
-    content: "※";
-}
-.hy::before {
-    content: "- ";
-}
-
-
 
 /* Footer -------------------------------------*/
 
+
 #footer {
-    max-width: 1080px;
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-    padding: 20px 0px 40px 0;
+    padding: 50px 0px 30px;
 }
+
+
+/* Contents start */
 
 .footer-set {
     text-align: center;
-}
-
-.f-logo {
-    display: inline-block;
-    margin: 14px;
 }
 
 .copyright {
     display: block;
     font-size: .6rem;
     letter-spacing: .1em;
+    margin-top: 35px;
 }
+
+
+/*----------------------------------------------------------------------------------------------*/
