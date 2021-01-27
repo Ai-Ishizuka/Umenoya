@@ -43,13 +43,6 @@ html,body {
 
 /* Big Layout */
 
-.x {
-    max-width: 1080px;
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-}
-
 #about,#style,#news,#access {
     width: 100vw;
     height: 100vh;
@@ -58,7 +51,14 @@ html,body {
     z-index: 1;
 }
 
-.b-txt::before {
+.x {
+    max-width: 1080px;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.back-txt::before {
     content: attr(data-eng);
     position: absolute;
     right: 0px;
@@ -144,20 +144,7 @@ a img {
 
 /* 1.Main visual -------------------------------------*/
 
-
-.title-set {
-    line-height: 1.4;
-}
-
-.title-name {
-    display: block;
-    margin-bottom: .8rem;
-    font-size: .8rem;
-    font-weight: 700;
-    letter-spacing: .1rem;
-}
-
-#MV {
+#top {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -175,33 +162,42 @@ a img {
     order: 2;
 }
 
-.top {
+.top-title-set {
     width: 30%;
     height: auto;
+    line-height: 1.4;
     order: 1;
     z-index: 1;
 }
 
+.title-name {
+    display: block;
+    margin-bottom: .8rem;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+}
+
 /* Navi Menu */
 
-.header-nav-items {
+.t-nav-items {
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
     list-style-position: outside;
 }
 
-.header-nav-item {
+.t-nav-item {
     padding: .8rem .5rem 0 0;
 }
 
-.header-nav-item:last-child {
+.t-nav-item:last-child {
     margin-right: 0;
 }
 
 /* Navi Menu - Styling */
 
-.click {
+.nav-clk {
     display: block;
     position: relative;
     padding: 14px 40px 14px 30px;
@@ -214,7 +210,7 @@ a img {
     color: #257a01;
 }
 
-.click::after {
+.nav-clk::after {
     content: "";
     display: block;
     position: absolute;
@@ -227,14 +223,14 @@ a img {
     transform: translateX(-50%) rotate(135deg);
 }
 
-.click:hover::after {
+.nav-clk:hover::after {
     border-top: 2px solid #fff;
     border-right: 2px solid #fff;
     transition: .3s;
 }
 
 
-.click:hover {
+.nav-clk:hover {
     color: #fff;
     background-color: #257a01;
     border: 2px solid #257a01;
@@ -243,7 +239,7 @@ a img {
 
 /* Food Menu Pop-Up */
 
-.Menu-Button {
+.menu-button {
     position: absolute;
     display: block;
     background-color: #f6f4ef;
@@ -260,7 +256,7 @@ a img {
     z-index: 1;
 }
 
-.Menu-Button span {
+.menu-button span {
     position: absolute;
     top: 51%;
     left: 21.5%;
@@ -271,7 +267,7 @@ a img {
     transform: translateY(-50%);
 }
 
-.Menu-Button:hover {
+.menu-button:hover {
     display: block;
     color: #fff;
     background-color: #257a01;
@@ -285,17 +281,17 @@ a img {
         width: 100vw;
     }
 
-    .top {
+    .top-title {
         width: 0%;
     }
     
-    .title-set {
+    .top-title-set {
         margin: 0 0 0 0;
         width: 100vw;
         padding: 2rem;
     }
 
-    .Menu-Button {
+    .menu-button {
         position: absolute;
         top: 1rem;
         right: 1rem;
@@ -306,7 +302,7 @@ a img {
         height: 47px;
     }
 
-    .Wrapper {
+    #top {
         height: auto;
         align-items: flex-end;
     }
@@ -321,21 +317,21 @@ a img {
         font-size: .8rem;
     }
 
-    .header-nav-items {
+    .t-nav-items {
         display: block;
         margin: 0 0 2.7rem 0;
     }
     
-    .header-nav-item {
+    .t-nav-item {
         padding: .48rem 0 0 0;
     }
 
-    .click {
+    .nav-clk {
         padding: .6rem 1.2rem;
         font-size: .75rem;
     }
 
-    .Menu-Button {
+    .menu-button {
         display: block;
         text-decoration: none;
         background-color: #257a01;
@@ -348,7 +344,7 @@ a img {
         overflow: hidden;
     }
 
-    .Menu-Button span {
+    .menu-button span {
         position: absolute;
         top: 51%;
         left: 21.5%;
@@ -379,7 +375,7 @@ a img {
     top: -10px;
 }
 
-.a-h2 {
+.ab-h2 {
     margin-top: 64px;
 }
 
@@ -394,17 +390,17 @@ a img {
     justify-content: space-between;
 }
 
-.a-inner {
+.ab-text-set {
     width: 75%;
     padding: 60px;
     border: 1px solid #222;
 }
 
-.a-copy {
+.ab-copy {
     margin-top: 20px;
 }
 
-.a-text-img {
+.ab-text-img {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -412,7 +408,7 @@ a img {
     margin-top: 16px;
 }
 
-.a-text {
+.ab-text {
     width: 50%;
     height: auto;
     font-size: .86rem;
@@ -426,7 +422,7 @@ figure [src$="img-about01.jpg"] {
     height: auto;
 }
 
-.a-store-img {
+.ab-img-store {
     padding-left: 60px;
 }
 
@@ -459,11 +455,11 @@ figure [src$="img-about01.jpg"] {
     padding: 0 8%;
 }
 
-.s-text {
+.s-text-set {
     margin: 0 50px;
 }
 
-.s-set::before {
+.s-list-one::before {
     content: "";
     position: absolute;
     top: 40%;
@@ -471,7 +467,7 @@ figure [src$="img-about01.jpg"] {
     border-right: 1px solid #257a01;
 }
 
-.s-set:first-child::before {
+.s-list-one:first-child::before {
     border-right: none;
 }
 
@@ -484,12 +480,12 @@ figure [src$="img-about01.jpg"] {
     padding-bottom: 10px;
 }
 
-.s-set .s-icon img {
+.s-icon img {
     width: 120px;
     height: auto;
 }
 
-.s-set .s-text h3 {
+.s-h3 {
     padding: 26px 18px 12px;
     text-align: center;
     font-weight: 500;
@@ -498,7 +494,7 @@ figure [src$="img-about01.jpg"] {
     border-radius: 100px 100px 4px 4px;
 }
 
-.s-set .s-text p {
+.s-text-set p {
     margin-top: 20px;
 }
 
@@ -523,7 +519,7 @@ figure [src$="img-about01.jpg"] {
     top: 400px;
 }
 
-.archive {
+.n-archive {
     width: 50%;
     height: 130px;
     margin: 30px auto 0;
@@ -543,13 +539,13 @@ figure [src$="img-about01.jpg"] {
     padding: 8px 18px;
 }
 
-.news-title {
+.n-title {
     flex-basis: 30%;
     margin-top: 25px;
     padding-left: 28px;
 }
 
-.news-date {
+.n-date {
     flex-basis: 70%;
     margin-top: 25px;
 }
@@ -587,11 +583,11 @@ figure [src$="img-about01.jpg"] {
     margin-top: 180px;
 }
 
-address {
+.ac-text-set {
     font-style: normal;
 }
 
-.address-text {
+.ad-text {
     margin-top: 30px;
     font-size: .84rem;
     line-height: 1.8em;
@@ -635,13 +631,13 @@ address {
     font-weight: 500;
 }
 
-.highlight {
+.ac-hL {
     background-color: #fffc82;
 }
 
 /* Notes */
 
-.note-set {
+.notes {
     margin-top: 12px;
     clear: both;
 }
@@ -662,11 +658,11 @@ address {
     margin-bottom: 12px;
 }
 
-.bold {
+.ac-bold {
     font-weight: 500;
 }
 
-.as::before {
+.ast::before {
     content: "※";
 }
 
@@ -677,7 +673,7 @@ address {
 
 /* Google-Map */
 
-.gmap {
+.g-map {
     overflow: hidden;
     padding-left: 70px;
 }
@@ -697,7 +693,7 @@ address {
     text-align: center;
 }
 
-.copyright {
+.f-copyright {
     display: block;
     font-size: .6rem;
     letter-spacing: .1em;
