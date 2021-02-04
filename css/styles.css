@@ -102,7 +102,7 @@ h2, h3 {
 
 p {
     text-align: justify;
-    font-size: .76rem;
+    font-size: .77rem;
     letter-spacing: .06em;
     line-height: 2.1em;
 }
@@ -123,6 +123,9 @@ a img {
     height: auto;
 }
 
+.bold {
+    font-weight: 700;
+}
 
 /* Selection */
 
@@ -308,19 +311,19 @@ a img {
     }
 
     .title-name {
-        font-size: .8rem;
+        font-size: .77rem;
     }
 
     .Logo {
-        width: 236px;
-        height: 47px;
+        width: 206px;
+        height: auto;
         margin-top: 5px;
     }
 
     h1 {
-        font-size: .74rem;
+        font-size: .88rem;
         font-weight: 500;
-        margin-top: 60px;
+        margin-top: 50px;
     }
 
     .t-nav-items {
@@ -335,7 +338,7 @@ a img {
 
     .nav-clk {
         padding: 14px 35px 14px 25px;
-        font-size: .75rem;
+        font-size: .77rem;
     }
 
     .nav-clk::after {
@@ -356,7 +359,7 @@ a img {
     .menu-button span {
         line-height: 1.4em;
         font-weight: 400;
-        font-size: .9rem;
+        font-size: .88rem;
     }
 }
 
@@ -435,7 +438,7 @@ figure [src$="img-about01.jpg"] {
 @media screen and (max-width: 640px) {
     
     #about {
-        background-size: 100%;
+        background-image: url(../images/wave-shortest-grey-rp.svg);    
         margin-top: 110px;
         height: auto;
         min-height: auto;
@@ -448,7 +451,7 @@ figure [src$="img-about01.jpg"] {
     }
 
     .ab-h2 {
-        margin-top: 80px;
+        margin-top: 120px;
     }
 
     .ab-text-set {
@@ -468,7 +471,7 @@ figure [src$="img-about01.jpg"] {
         width: 100%;
         font-weight: 400;
         font-size: .77rem;
-        line-height: 2.5;
+        line-height: 2.5em;
     }
 
     .ab-img-store {
@@ -484,7 +487,7 @@ figure [src$="img-about01.jpg"] {
 
 
 #style {
-    background-image: url(../images/wave-02-3.svg);
+    background-image: url(../images/wave-02.svg);
     background-size: cover;
     min-height: 850px;
 }
@@ -556,9 +559,10 @@ figure [src$="img-about01.jpg"] {
 @media screen and (max-width: 640px) {
 
     #style {
+        background-image: url(../images/wave-longest-yellow-rp.svg);
         margin-top: 80px;
         position: static;
-        min-height: auto;
+        min-height: 1480px;
         height: auto;
     }
 
@@ -599,6 +603,7 @@ figure [src$="img-about01.jpg"] {
 
     .s-h3 {
         width: 160px;
+        margin: 0 auto;
     }
 }
 
@@ -658,20 +663,21 @@ figure [src$="img-about01.jpg"] {
 @media screen and (max-width: 640px) {
 
     #news {
+        background-image: url(../images/wave-pink-rp.svg);   
         height: 70vh;
         min-height: auto;
-        background-size: 75%;
-        margin-top: 140px;
+        background-size: 70%;
+        margin-top: 80px;
     }
     
     .news-inner {
-        position: static;
+        top: 90px;
     }
 
     .n-archive {
         width: 85%;
         height: auto;
-        margin: 60px 0 0 auto;
+        margin: 75px 0 0 auto;
         border-left: 2px solid #f00;
     }
     
@@ -684,14 +690,17 @@ figure [src$="img-about01.jpg"] {
         margin-top: 30px;
         padding-left: 15px;
     }
+
     .n-date {
         text-indent: -1em;
         margin-top: 12px;
         padding-left: 35px;
     }
+
     .n-title:first-child {
         margin-top: 10px;
     }
+
     .n-date:last-child {
         margin-bottom: 10px;
     }
@@ -728,7 +737,7 @@ figure [src$="img-about01.jpg"] {
 
 .ad-text {
     margin-top: 30px;
-    font-size: .84rem;
+    font-size: .88rem;
     line-height: 1.8em;
 }
 
@@ -760,6 +769,7 @@ figure [src$="img-about01.jpg"] {
     padding-right:20px;
     text-align: right;
     letter-spacing: .04rem;
+    font-weight: 700;
 }
 
 .info-content {
@@ -767,7 +777,6 @@ figure [src$="img-about01.jpg"] {
     border-left: 4px solid #eeeeef;
     padding-left: 20px;    
     letter-spacing: .07em;
-    font-weight: 500;
 }
 
 .ac-hL {
@@ -797,10 +806,6 @@ figure [src$="img-about01.jpg"] {
     margin-bottom: 12px;
 }
 
-.ac-bold {
-    font-weight: 500;
-}
-
 .ast::before {
     content: "※";
 }
@@ -825,7 +830,10 @@ figure [src$="img-about01.jpg"] {
 @media screen and (max-width: 640px) {
 
     #access {
+        background-image: url(../images/wave-grey-rp.svg);
+        background-size: 100%;
         height: auto;
+        margin-top: 100px;
     }
     .ac-text-map {
         flex-wrap: wrap;
@@ -833,7 +841,7 @@ figure [src$="img-about01.jpg"] {
     }
 
     .ad-text {
-        font-size: .76rem;
+        font-size: .77rem;
     }
 
     .info-set {
@@ -876,12 +884,16 @@ figure [src$="img-about01.jpg"] {
 
     .g-map {
         padding-left: 0;
-        margin-top: 40px;
+        margin-top: 50px;
     }
 
     iframe {
-        height: 300px;
-        width: 300px;
+        height: 420px;
+        width: fill;
+        width: -moz-available;
+        width: -webkit-fill-available;
+        border-radius: 23px;
+        border: 7px solid #fff;
     }
 
     .arrow::before {
