@@ -166,7 +166,7 @@ a img {
 .top-background {
     width: 50vw;
     height: 100vh;
-    background: url("top-background-pattern.svg") repeat;
+    background: url("../images/top-background-pattern.svg") repeat;
     background-position: 0px 150px;
     background-size: 90%;
     order: 2;
@@ -310,7 +310,7 @@ a img {
     
     #top {
         display: block;
-        background: url("top-background-pattern.svg") repeat;
+        background: url("../images/top-background-pattern.svg") repeat;
         background-size: 120%;
         height: 100vh;
         background-position: 250px -150px;
@@ -394,7 +394,7 @@ a img {
 
 
 #about {
-    background-image: url(about-wave.svg);
+    background-image: url(../images/about-wave.svg);
     background-size: 100%;
     margin-top: 150px;
 }
@@ -458,7 +458,7 @@ figure [src$="img-about01.jpg"] {
 @media screen and (max-width: 640px) {
     
     #about {
-        background-image: url(about-wave-rp.svg);    
+        background-image: url(../images/about-wave-rp.svg);    
         margin-top: 110px;
         height: auto;
         min-height: auto;
@@ -515,7 +515,7 @@ figure [src$="img-about01.jpg"] {
 
 
 #style {
-    background-image: url(style-wave.svg);
+    background-image: url(../images/style-wave.svg);
     background-size: cover;
     min-height: 850px;
 }
@@ -582,7 +582,7 @@ figure [src$="img-about01.jpg"] {
 @media screen and (max-width: 640px) {
 
     #style {
-        background-image: url(style-wave-rp.svg);
+        background-image: url(../images/style-wave-rp.svg);
         margin-top: 80px;
         position: static;
         min-height: 1480px;
@@ -634,7 +634,7 @@ figure [src$="img-about01.jpg"] {
 /* 3.News -------------------------------------*/
 
 #news {
-    background-image: url(/news-wave.svg);
+    background-image: url(../images/news-wave.svg);
     background-position: right;
     background-size: calc(70vw + 110px);
 }
@@ -686,7 +686,7 @@ figure [src$="img-about01.jpg"] {
 @media screen and (max-width: 640px) {
 
     #news {
-        background-image: url(news-wave-rp.svg);   
+        background-image: url(../images/news-wave-rp.svg);   
         height: 70vh;
         min-height: auto;
         background-size: 70%;
@@ -733,7 +733,7 @@ figure [src$="img-about01.jpg"] {
 /* 4.Access -------------------------------------*/
 
 #access {
-    background-image: url(access-wave.svg);
+    background-image: url(../images/access-wave.svg);
     background-size: cover;
     height: 80vh;
 }
@@ -849,7 +849,7 @@ figure [src$="img-about01.jpg"] {
 @media screen and (max-width: 640px) {
 
     #access {
-        background-image: url(access-wave-rp.svg);
+        background-image: url(../images/access-wave-rp.svg);
         background-size: 100%;
         height: auto;
         margin-top: 100px;
