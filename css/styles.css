@@ -166,7 +166,11 @@ a img {
 .top-background {
     width: 50vw;
     height: 100vh;
+<<<<<<< HEAD
     background: url("../top-background-pattern.svg") repeat;
+=======
+    background: url("../images/top-background-pattern.svg") repeat;
+>>>>>>> parent of 7954765... urlpassname-change-top
     background-position: 0px 150px;
     background-size: 90%;
     order: 2;
