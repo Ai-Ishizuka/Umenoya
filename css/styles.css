@@ -354,7 +354,7 @@ a img {
 
     .nav-clk {
         padding: 12px 40px 12px 20px;
-        font-size: .88rem;
+        font-size: .77rem;
     }
 
     .nav-clk::after {
@@ -492,11 +492,12 @@ figure [src$="img-about01.jpg"] {
         display: block;
         align-items: center;
         justify-content: space-between;
-        margin-top: 30px;
+        margin-top: 20px;
     }
     .ab-text {
         width: 100%;
         font-weight: 400;
+        font-size: .77rem;
         line-height: 2.1em;
         letter-spacing: .08em;
     }
@@ -620,7 +621,7 @@ figure [src$="img-about01.jpg"] {
 
     .s-text-set p {
         margin-top: 15px;
-        font-size: .88rem;
+        font-size: .77rem;
     }
 
     .s-h3 {
@@ -874,12 +875,18 @@ figure [src$="img-about01.jpg"] {
     }
 
     .info-title, .info-content {
-        font-weight: 400;
+        font-weight: 500;
+    }
+
+    .info-title, .info-content:not(:last-child) {
+        padding-bottom: 20px;
     }
 
     .br {
         display: block;
     }
+
+
 
     .notes-hy {
         margin-top: 20px;
@@ -887,6 +894,7 @@ figure [src$="img-about01.jpg"] {
 
     .notes-ast {
         margin-top: 5px;
+        line-height: 1em;
     }
 
     .note-1 {
@@ -910,11 +918,16 @@ figure [src$="img-about01.jpg"] {
         margin-left: 10px;
     }
 
+    .notes-hy, .notes-ast {
+        line-height: 1em;
+    }
+
     .point {
         letter-spacing: .06em;
         text-indent: -1em;
         padding-left: 20px;
         color: #666;
+        line-height: 1.7em;
     }
 
     .g-map {
@@ -970,10 +983,13 @@ figure [src$="img-about01.jpg"] {
     border-right: 1px solid #999;
 }
 
-
-
 .footer-nav li:last-child {
     border-right: none;
+}
+
+.f-Logo {
+    display: inline-block;
+    margin: 30px auto 0;
 }
 
 
@@ -1004,7 +1020,6 @@ figure [src$="img-about01.jpg"] {
     .footer-nav {
         flex-wrap: wrap;
         line-height: 1.6em;
-        margin-top: 20px;
     }
 
     .footer-nav li a {
@@ -1013,9 +1028,10 @@ figure [src$="img-about01.jpg"] {
     }
 
     .f-Logo {
+        display: inline-block;
         width: 160px;
         height: auto;
-        margin-top: 0px;
+        margin: 10px auto 0;
     }
 }
 
