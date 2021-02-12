@@ -90,7 +90,7 @@ h2 {
 
 h3 {
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 1.4em;
 }
 
@@ -103,7 +103,7 @@ p {
     text-align: justify;
     font-size: .77rem;
     letter-spacing: .08em;
-    line-height: 2.1em;
+    line-height: 2.2em;
 }
 
 a {
@@ -113,8 +113,7 @@ a {
 }
 
 a:hover { 
-    color: #28894B;
-    opacity: 0.8s;
+    opacity: 0.85;
 }
 
 a img {
@@ -136,6 +135,19 @@ a img {
 ::-moz-selection {
     background: #c8c9ca;
     color: #000;
+}
+
+
+
+/* Responsive Settings - Base -*/
+
+
+@media screen and (max-width: 1024px) {
+
+    .back-txt::before {
+        font-size: 10rem;
+    }
+
 }
 
 @media screen and (max-width: 640px) {
@@ -296,7 +308,7 @@ a img {
     position: fixed;
     right: 0;
     bottom: 0;
-    right: 40px;
+    right: 45px;
     bottom: 60px;
     z-index: 3;
     opacity: .7;
@@ -307,6 +319,82 @@ a img {
 }
 
 /* Responsive Settings - Top -*/
+
+
+@media screen and (max-width: 1024px) {
+    
+    #top {
+        display: block;
+        background: url(../images/top-background-pattern.svg) repeat;
+        background-size: 70%;
+        height: 100vh;
+        background-position: 270px -80px;
+    }
+
+    .top-background {
+        display: none;
+    }
+
+    .top-title-set {
+        display: inline-block;
+        padding: 0 10%;
+        width: 100%;
+        margin-top: 300px;
+    }
+
+    .title-name {
+        font-size: .77rem;
+    }
+
+    .Logo {
+        display: block;
+        width: 305px;
+        height: auto;
+        margin-top: 18px;
+    }
+
+    h1 {
+        display: none;
+        font-size: .7rem;
+        font-weight: 500;
+        margin: 10px 0 0 5px;
+    }
+
+    .t-nav-items {
+        margin-top: 45px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-clk {
+        padding: 14px 40px 14px 20px;
+    }
+
+    .nav-clk::after {
+        top: 20px;
+        right: 20px;
+    }
+
+    .menu-button {
+        background-color: #257a01;
+        color: #fff;
+        border: none;
+        width: 130px;
+        height: 130px;
+        top: 70px;
+        right: 70px;
+    }
+
+    .menu-button span {
+        line-height: 1.4em;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+
+    .page-top {
+        right: 0;
+    }
+}
 
 @media screen and (max-width: 640px) {
     
@@ -336,11 +424,12 @@ a img {
     .Logo {
         width: 230px;
         height: auto;
-        margin-top: 10px;
+        margin-top: 16px;
     }
 
     h1 {
-        font-size: .66rem;
+        display: none;
+        font-size: .7rem;
         font-weight: 500;
         margin: 10px 0 0 5px;
     }
@@ -356,13 +445,12 @@ a img {
     }
 
     .nav-clk {
-        padding: 12px 40px 12px 20px;
-        font-size: .7rem;
+        padding: 14px 40px 14px 20px;
     }
 
     .nav-clk::after {
-        top: 17px;
-        right: 16px;
+        top: 20px;
+        right: 20px;
     }
 
     .menu-button {
@@ -422,8 +510,8 @@ a img {
 
 .ab-text-set {
     width: 75%;
-    padding: 60px;
-    border: 1px solid #222;
+    padding: 60px 60px 75px;
+    border: 1px solid #000;
 }
 
 .ab-copy {
@@ -435,13 +523,12 @@ a img {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-top: 16px;
+    margin-top: 45px;
 }
 
 .ab-text {
     width: 50%;
     height: auto;
-    font-size: .88rem;
     line-height: 2.46;
 }
 
@@ -457,6 +544,60 @@ figure [src$="img-about01.jpg"] {
 
 
 /* Responsive Settings - About -*/
+
+@media screen and (max-width: 1024px) {
+    
+    #about {
+        margin-top: 110px;
+        height: 80vh;
+    }
+
+    .about-inner {
+        flex-direction: column;
+        top: 160px;
+        position: static;
+    }
+
+    .ab-h2 {
+        margin-top: 120px;
+        line-height: 1.45em;
+    }
+
+    .ab-copy {
+        margin-top: 10px;
+        line-height: 1.8em;
+        font-size: 1rem;
+        letter-spacing: .12em;
+        font-weight: 700;
+    }
+
+    .ab-text-set {
+        border: none;
+        margin-top: 30px;
+        width: 80%;
+        margin-left: auto;
+    }
+
+    .ab-text-img {
+        display: block;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .ab-text {
+        width: 100%;
+        font-weight: 400;
+        font-size: .8rem;
+        letter-spacing: .08em;
+    }
+
+    .ab-img-store {
+        padding: 0;
+        margin-top: 20px;
+    }
+}
+
+
 @media screen and (max-width: 640px) {
     
     #about {
@@ -501,8 +642,8 @@ figure [src$="img-about01.jpg"] {
     .ab-text {
         width: 100%;
         font-weight: 400;
-        font-size: .7rem;
-        line-height: 2.1em;
+        font-size: .8rem;
+        line-height: 2.2em;
         letter-spacing: .08em;
     }
 
@@ -510,7 +651,6 @@ figure [src$="img-about01.jpg"] {
         padding: 0;
         margin-top: 20px;
     }
-
 }
     
 
@@ -581,6 +721,48 @@ figure [src$="img-about01.jpg"] {
 
 
 /* Responsive Settings - Style - */
+
+
+@media screen and (max-width: 1024px) {
+
+    .s-h2 {
+        padding-top: 100px;
+    }
+
+    .s-list {
+        padding: 0;
+    }
+
+    .s-list-one::before {
+        content: none;
+    }
+
+    .s-list-one {
+        margin-top: 65px;
+    }
+
+    .s-text-set {
+        margin: 23px 0 0 0;
+        padding: 0 10%;
+    }
+
+    .s-icon {
+        height: 120px;
+    }
+    .s-icon img {
+        width: 100px;
+    }
+
+    .s-text-set p {
+        font-size: .8rem;
+    }
+
+    .s-h3 {
+        width: 88%;
+        margin: 0 auto;
+    }
+}
+
 @media screen and (max-width: 640px) {
 
     #style {
@@ -607,7 +789,7 @@ figure [src$="img-about01.jpg"] {
     }
 
     .s-list-one {
-        margin-top: 55px;
+        margin-top: 65px;
     }
 
     .s-text-set {
@@ -624,14 +806,13 @@ figure [src$="img-about01.jpg"] {
     }
 
     .s-text-set p {
-        margin-top: 15px;
-        font-size: .7rem;
+        margin-top: 22px;
+        font-size: .8rem;
     }
 
     .s-h3 {
-        width: 88%;
+        width: 80%;
         margin: 0 auto;
-        font-weight: 700;
     }
 }
 
@@ -773,6 +954,16 @@ figure [src$="img-about01.jpg"] {
     margin-left: 6px;
 }
 
+.check-g-map {
+    background-color: #257a01;
+    color: #fff;
+    border-radius: 10px;
+    font-size: .6rem;
+    letter-spacing: .1em;
+    padding: 2px 10px;
+    font-weight: 500;
+}
+
 .note-1 {
     display: block;
     margin-bottom:16px;
@@ -902,7 +1093,7 @@ figure [src$="img-about01.jpg"] {
     }
 
     .notes-ast {
-        margin-top: 5px;
+        margin-top: 10px;
         line-height: 1em;
     }
 
@@ -975,14 +1166,14 @@ figure [src$="img-about01.jpg"] {
     display: block;
     font-size: .6rem;
     letter-spacing: .1em;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .footer-nav {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    font-size: .77rem;
+    font-size: .8rem;
     margin-top: 40px;
 }
 
@@ -991,13 +1182,18 @@ figure [src$="img-about01.jpg"] {
     border-right: 1px solid #999;
 }
 
+.footer-nav li a {
+    letter-spacing: .14em;
+    color: #666;
+}
+
 .footer-nav li:last-child {
     border-right: none;
 }
 
 .f-Logo {
     display: inline-block;
-    margin: 30px auto 0;
+    margin: 50px auto 0;
 }
 
 
@@ -1032,11 +1228,6 @@ figure [src$="img-about01.jpg"] {
         flex-wrap: wrap;
         line-height: 1.6em;
         font-size: .66rem;
-    }
-
-    .footer-nav li a {
-        letter-spacing: .14em;
-        color: #666;
     }
 
     .f-Logo {
