@@ -91,8 +91,7 @@ h2 {
 h3 {
     font-size: 1rem;
     font-weight: 500;
-    line-height: ;
-    letter-spacing: ;
+    line-height: 1.4em;
 }
 
 h2, h3 {
@@ -103,7 +102,7 @@ h2, h3 {
 p {
     text-align: justify;
     font-size: .77rem;
-    letter-spacing: .06em;
+    letter-spacing: .08em;
     line-height: 2.1em;
 }
 
@@ -297,11 +296,11 @@ a img {
     right: 40px;
     bottom: 60px;
     z-index: 3;
-    opacity: .75;
+    opacity: .4;
 }
 
 .page-top:hover {
-    opacity: .4;
+    opacity: .3;
 }
 
 /* Responsive Settings - Top -*/
@@ -322,9 +321,9 @@ a img {
 
     .top-title-set {
         display: inline-block;
-        padding: 0 50px;
+        padding: 0 10%;
         width: 100%;
-        margin-top: 150px;  
+        margin-top: 140px;  
     }
 
     .title-name {
@@ -332,13 +331,13 @@ a img {
     }
 
     .Logo {
-        width: 206px;
+        width: 230px;
         height: auto;
-        margin-top: 5px;
+        margin-top: 0px;
     }
 
     h1 {
-        font-size: .88rem;
+        font-size: .77rem;
         font-weight: 500;
         margin-top: 50px;
     }
@@ -350,12 +349,12 @@ a img {
     }
     
     .t-nav-item {
-        padding-top: 10px;
+        padding-top: 8px;
     }
 
     .nav-clk {
-        padding: 14px 35px 14px 25px;
-        font-size: .77rem;
+        padding: 12px 40px 12px 20px;
+        font-size: .88rem;
     }
 
     .nav-clk::after {
@@ -375,7 +374,7 @@ a img {
 
     .menu-button span {
         line-height: 1.4em;
-        font-weight: 400;
+        font-weight: 500;
         font-size: .88rem;
     }
 
@@ -439,7 +438,7 @@ a img {
 .ab-text {
     width: 50%;
     height: auto;
-    font-size: .86rem;
+    font-size: .88rem;
     line-height: 2.46;
 }
 
@@ -476,9 +475,10 @@ figure [src$="img-about01.jpg"] {
     }
 
     .ab-copy {
-        margin-top: 0;
-        line-height: 1.6em;
+        margin-top: 0;    
+        line-height: 1.8em;
         font-size: 1.05rem;
+        letter-spacing: .16em;
     }
 
     .ab-text-set {
@@ -497,8 +497,7 @@ figure [src$="img-about01.jpg"] {
     .ab-text {
         width: 100%;
         font-weight: 400;
-        font-size: .77rem;
-        line-height: 2.5em;
+        line-height: 2.1em;
         letter-spacing: .08em;
     }
 
@@ -567,8 +566,6 @@ figure [src$="img-about01.jpg"] {
 .s-h3 {
     padding: 26px 18px 12px;
     text-align: center;
-    font-weight: 500;
-    line-height: 1.4;
     background-color: #fff;
     border-radius: 100px 100px 4px 4px;
 }
@@ -584,6 +581,7 @@ figure [src$="img-about01.jpg"] {
     #style {
         background-image: url(../images/style-wave-rp.svg);
         margin-top: 80px;
+        padding-bottom: 100px;
         position: static;
         min-height: 1480px;
         height: auto;
@@ -608,7 +606,7 @@ figure [src$="img-about01.jpg"] {
     }
 
     .s-text-set {
-        margin: 10px 0 0 0;
+        margin: 23px 0 0 0;
         padding: 0 12%;
     }
 
@@ -622,6 +620,7 @@ figure [src$="img-about01.jpg"] {
 
     .s-text-set p {
         margin-top: 15px;
+        font-size: .88rem;
     }
 
     .s-h3 {
@@ -861,7 +860,6 @@ figure [src$="img-about01.jpg"] {
 
     .ad-text {
         font-size: .88rem;
-        letter-spacing: 0em;
     }
 
     .info-set {
@@ -916,6 +914,7 @@ figure [src$="img-about01.jpg"] {
         letter-spacing: .06em;
         text-indent: -1em;
         padding-left: 20px;
+        color: #666;
     }
 
     .g-map {
@@ -926,8 +925,7 @@ figure [src$="img-about01.jpg"] {
     iframe {
         height: 420px;
         width: fill;
-        width: -moz-available;
-        width: -webkit-fill-available;
+        width: auto;
         border-radius: 23px;
         border: 7px solid #fff;
     }
@@ -973,6 +971,7 @@ figure [src$="img-about01.jpg"] {
 }
 
 
+
 .footer-nav li:last-child {
     border-right: none;
 }
@@ -1010,6 +1009,7 @@ figure [src$="img-about01.jpg"] {
 
     .footer-nav li a {
         letter-spacing: .14em;
+        color: #666;
     }
 
     .f-Logo {
@@ -1017,8 +1017,6 @@ figure [src$="img-about01.jpg"] {
         height: auto;
         margin-top: 0px;
     }
-
-
 }
 
 /*----------------------------------------------------------------------------------------------*/
