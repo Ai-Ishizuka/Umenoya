@@ -180,10 +180,13 @@ a img {
 }
 
 .title-name {
-    display: block;
+    display: inline-block;
     font-size: .8rem;
     font-weight: 700;
     letter-spacing: .1rem;
+    background-color: #fce9e6;
+    border-radius: 20px;
+    padding: 0 10px;
 }
 
 .Logo {
@@ -296,11 +299,11 @@ a img {
     right: 40px;
     bottom: 60px;
     z-index: 3;
-    opacity: .4;
+    opacity: .7;
 }
 
 .page-top:hover {
-    opacity: .3;
+    opacity: .4;
 }
 
 /* Responsive Settings - Top -*/
@@ -310,9 +313,9 @@ a img {
     #top {
         display: block;
         background: url("../images/top-background-pattern.svg") repeat;
-        background-size: 120%;
+        background-size: 115%;
         height: 100vh;
-        background-position: 250px -150px;
+        background-position: 150px -300px;
     }
 
     .top-background {
@@ -323,27 +326,27 @@ a img {
         display: inline-block;
         padding: 0 10%;
         width: 100%;
-        margin-top: 140px;  
+        margin-top: 170px;  
     }
 
     .title-name {
-        font-size: .77rem;
+        font-size: .66rem;
     }
 
     .Logo {
         width: 230px;
         height: auto;
-        margin-top: 0px;
+        margin-top: 10px;
     }
 
     h1 {
-        font-size: .77rem;
+        font-size: .66rem;
         font-weight: 500;
-        margin-top: 50px;
+        margin: 10px 0 0 5px;
     }
 
     .t-nav-items {
-        margin-top: 10px;
+        margin-top: 45px;
         flex-direction: column;
         align-items: flex-start;
     }
@@ -354,22 +357,22 @@ a img {
 
     .nav-clk {
         padding: 12px 40px 12px 20px;
-        font-size: .77rem;
+        font-size: .7rem;
     }
 
     .nav-clk::after {
-        top: 19px;
-        right: 14px;
+        top: 17px;
+        right: 16px;
     }
 
     .menu-button {
         background-color: #257a01;
         color: #fff;
         border: none;
-        width: 120px;
-        height: 120px;
-        top: 30px;
-        right: 30px;
+        width: 110px;
+        height: 110px;
+        top: 20px;
+        right: 20px;
     }
 
     .menu-button span {
@@ -475,10 +478,11 @@ figure [src$="img-about01.jpg"] {
     }
 
     .ab-copy {
-        margin-top: 0;    
+        margin-top: 10px;
         line-height: 1.8em;
-        font-size: 1.05rem;
-        letter-spacing: .16em;
+        font-size: 1rem;
+        letter-spacing: .12em;
+        font-weight: 700;
     }
 
     .ab-text-set {
@@ -497,7 +501,7 @@ figure [src$="img-about01.jpg"] {
     .ab-text {
         width: 100%;
         font-weight: 400;
-        font-size: .77rem;
+        font-size: .7rem;
         line-height: 2.1em;
         letter-spacing: .08em;
     }
@@ -621,12 +625,13 @@ figure [src$="img-about01.jpg"] {
 
     .s-text-set p {
         margin-top: 15px;
-        font-size: .77rem;
+        font-size: .7rem;
     }
 
     .s-h3 {
         width: 88%;
         margin: 0 auto;
+        font-weight: 700;
     }
 }
 
@@ -859,6 +864,11 @@ figure [src$="img-about01.jpg"] {
         margin-top: 100px;
     }
 
+    .ac-h3 {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
     .ad-text {
         font-size: .88rem;
     }
@@ -886,10 +896,9 @@ figure [src$="img-about01.jpg"] {
         display: block;
     }
 
-
-
     .notes-hy {
-        margin-top: 20px;
+        margin-top: 10px;
+        color: #666;
     }
 
     .notes-ast {
@@ -926,13 +935,12 @@ figure [src$="img-about01.jpg"] {
         letter-spacing: .06em;
         text-indent: -1em;
         padding-left: 20px;
-        color: #666;
         line-height: 1.7em;
     }
 
     .g-map {
         padding-left: 0;
-        margin-top: 50px;
+        margin-top: 30px;
     }
 
     iframe {
@@ -998,17 +1006,20 @@ figure [src$="img-about01.jpg"] {
 @media screen and (max-width: 640px) {
 
     #footer {
-        margin-top: 30px;
+        margin-top: 50px;
         padding: 0 0 25px 0;
     }
     
     .f-copyright, .footer-nav {
         padding: 0 30px;
-        font-size: .66rem;        
+    }
+
+    .f-copyright {
+        font-size: .6rem;
     }
 
     .f-copyright, .f-copyright a {
-        margin-top: 20px;
+        margin-top: 35px;
         color: #999;
     }
 
@@ -1020,6 +1031,7 @@ figure [src$="img-about01.jpg"] {
     .footer-nav {
         flex-wrap: wrap;
         line-height: 1.6em;
+        font-size: .66rem;
     }
 
     .footer-nav li a {
@@ -1031,7 +1043,7 @@ figure [src$="img-about01.jpg"] {
         display: inline-block;
         width: 160px;
         height: auto;
-        margin: 10px auto 0;
+        margin: 35px auto 0;
     }
 }
 
