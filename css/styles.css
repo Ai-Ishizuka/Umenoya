@@ -86,7 +86,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.1rem;
+    font-size: 1.04rem;
     font-weight: 700;
     line-height: 1.4em;
 }
@@ -158,6 +158,15 @@ a img {
     }
 
 }
+
+@media screen and (max-width: 812px) and (orientation: landscape) {
+
+    .back-txt::before {
+        content: none;
+    }
+
+}
+
 
 /* 2:  Main Visual
 ===================================================================*/
@@ -255,13 +264,13 @@ a img {
     transition: .3s;
 }
 
-
 .nav-clk:hover {
     color: #fff;
     background-color: #257a01;
     border: 2px solid #257a01;
     transition: .3s;
 }
+
 
 /* Food Menu Pop-Up */
 
@@ -298,6 +307,7 @@ a img {
     color: #257a01;
     border: 2px solid #257a01;
     background-color: #fff;
+    opacity: 1;
 }
 
 
@@ -311,6 +321,8 @@ a img {
     bottom: 60px;
     z-index: 3;
     opacity: .7;
+    width: 80px;
+    height: auto;
 }
 
 .page-top:hover {
@@ -320,7 +332,7 @@ a img {
 /* Responsive Settings - Top -*/
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px){
     
     #top {
         display: block;
@@ -385,12 +397,18 @@ a img {
 
     .menu-button span {
         line-height: 1.4em;
-        font-weight: 500;
+        font-weight: 700;
         font-size: 1rem;
+    }
+
+    .menu-button:hover {
+        color: #fff;
+        background-color: #257a01;
     }
 
     .page-top {
         right: 0;
+        width: 65px;
     }
 }
 
@@ -400,18 +418,10 @@ a img {
         display: block;
         background: url("../images/top-background-pattern.svg") repeat;
         background-size: 115%;
-        height: 100vh;
         background-position: 150px -300px;
     }
 
-    .top-background {
-        display: none;
-    }
-
     .top-title-set {
-        display: inline-block;
-        padding: 0 10%;
-        width: 100%;
         margin-top: 170px;  
     }
 
@@ -421,54 +431,54 @@ a img {
 
     .Logo {
         width: 230px;
-        height: auto;
         margin-top: 16px;
-    }
-
-    h1 {
-        display: none;
-        font-size: .7rem;
-        font-weight: 500;
-        margin: 10px 0 0 5px;
-    }
-
-    .t-nav-items {
-        margin-top: 45px;
-        flex-direction: column;
-        align-items: flex-start;
     }
     
     .t-nav-item {
         padding-top: 8px;
     }
 
-    .nav-clk {
-        padding: 14px 40px 14px 20px;
-    }
-
-    .nav-clk::after {
-        top: 20px;
-        right: 20px;
-    }
-
     .menu-button {
-        background-color: #257a01;
-        color: #fff;
-        border: none;
-        width: 110px;
-        height: 110px;
+        width: 122px;
+        height: 122px;
         top: 20px;
         right: 20px;
     }
 
     .menu-button span {
-        line-height: 1.4em;
-        font-weight: 500;
-        font-size: .88rem;
+        font-size: .84rem;
+        left: 23.5%;
+    }
+}
+
+@media screen and (max-width: 812px) and (orientation: landscape) {
+
+    .menu-button {
+        top: 30px;
+        right: 60px;
+    }
+
+    .Logo {
+        width: 275px;
+    }
+
+    .t-nav-items {
+        margin-top: 35px;
+    }
+
+    .top-title-set {
+        margin-top: 60px;
+    }
+
+    .t-nav-items {
+        flex-direction: row;
     }
 
     .page-top {
-        right: 0;
+        width: 90px;
+        height: auto;
+        right: 20px;
+        bottom: 40px;
     }
 }
 
@@ -485,6 +495,7 @@ a img {
     background-image: url(../images/about-wave.svg);
     background-size: 100%;
     margin-top: 150px;
+    min-height: 1040px;
 }
 
 .back-txt[data-eng="ABOUT"]::before {
@@ -543,7 +554,7 @@ figure img[src$="images/about-entrance.png"] {
 
 /* Responsive Settings - About -*/
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
     
     #about {
         margin-top: 110px;
@@ -591,6 +602,7 @@ figure img[src$="images/about-entrance.png"] {
         padding: 0;
         margin-top: 20px;
     }
+
 }
 
 @media screen and (max-width: 640px) {
@@ -619,6 +631,44 @@ figure img[src$="images/about-entrance.png"] {
     .ab-img-store {
         margin-top: 10px;
     }
+
+}
+
+@media screen and (max-width: 812px) and (orientation: landscape) {
+
+    #about {
+        min-height: 600px;
+    }
+
+    .about-inner {
+        flex-direction: column;
+    }
+
+    .ab-text-set {
+        width: 100%;
+        padding: 0;
+    }
+
+    .ab-h2 {
+        margin-top: 60px;
+    }
+
+    .ab-text {
+        padding-right: 20px;
+    }
+
+    .ab-text-img {
+        display: flex;
+    }
+
+    .ab-img-store {
+        margin: 0;
+    }
+
+    figure img[src$="images/about-entrance.png"] {
+        width: 70vw;
+    }
+
 }
 
 
@@ -690,7 +740,7 @@ figure img[src$="images/about-entrance.png"] {
 /* Responsive Settings - Style - */
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
 
     #style {
         margin-top: 100px;
@@ -733,6 +783,7 @@ figure img[src$="images/about-entrance.png"] {
         width: 88%;
         margin: 0 auto;
     }
+
 }
 
 @media screen and (max-width: 640px) {
@@ -762,7 +813,33 @@ figure img[src$="images/about-entrance.png"] {
     .s-text-set p {
         margin-top: 22px;
     }
+
 }
+
+@media screen and (min-width: 320px) and (max-width: 812px) and (orientation: landscape) {
+
+    #style {
+        background-image: url(../images/style-wave.svg);
+        background-size: 1540px;
+        margin-top: 40px;
+        min-height: 808px;
+    }
+
+    .s-list {
+        margin: 0;
+    }
+
+    .s-h3 {
+        width: 100%;
+        font-size: .9rem;
+    }
+
+    .s-list {
+        flex-wrap: nowrap;
+    }
+
+}
+
 
 
 /* 3.News -------------------------------------*/
@@ -875,6 +952,27 @@ figure img[src$="images/about-entrance.png"] {
     .n-date:last-child {
         margin-bottom: 10px;
     }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 812px) and (orientation: landscape) {
+
+    #news {
+        background-image: url(../images/news-wave.svg);
+        background-size: 85%;
+        height: 120vh;
+        min-height: auto;
+    }
+
+    .news-inner {
+        top: 50px;
+    }
+
+    .n-archive {
+        width: 65%;
+        margin: 50px auto 0;
+    }
+
 }
 
 
@@ -993,14 +1091,21 @@ figure img[src$="images/about-entrance.png"] {
 /* Google-Map */
 
 .g-map {
-    overflow: hidden;
     padding-left: 70px;
+}
+
+iframe {
+    width: 30vw;
+    height: 50vh;    
+    border-radius: 26px;
+    border: 7px solid #fff;
 }
 
 
 /* Responsive Settings -Access- */
-@media screen and (min-device-width: 640px) and
-    (max-device-width: 1024px) and (orientation:portrait) {
+
+/* tablet 縦 */
+@media screen and (max-width: 1023px) and (orientation: portrait) {
     
     #access {
         background-image: url(../images/access-wave-rp.svg);
@@ -1020,29 +1125,22 @@ figure img[src$="images/about-entrance.png"] {
     }
 
     iframe {
-        width: 500px;
-        height: 500px;
+        border-radius: 23px;
+        border: 7px solid #fff;
+        width: 70vw;
+        height: 50vh;
     }
 
 }
 
-@media screen and (min-device-width: 640px) and
-    (max-device-width: 1024px) and (orientation: landscape) {
-    
-    .ac-text-map {
-        flex-wrap: nowrap;
-        margin-top: 90px;
-    }
-
-}
-
-
+/* phone 縦 */
 @media screen and (max-device-width: 640px) {
 
     #access {
         background-image: url(../images/access-wave-rp.svg);
         background-size: 100%;
         height: auto;
+        min-height: auto;
         margin-top: 100px;
     }
 
@@ -1084,7 +1182,7 @@ figure img[src$="images/about-entrance.png"] {
     }
 
     .notes-hy {
-        margin-top: 10px;
+        margin-top: 20px;
         color: #666;
     }
 
@@ -1131,15 +1229,44 @@ figure img[src$="images/about-entrance.png"] {
     }
 
     iframe {
-        height: 420px;
-        width: fill;
-        width: auto;
-        border-radius: 23px;
-        border: 7px solid #fff;
+        height: 60vh;
+        width: 85vw;
     }
 
     .arrow::before {
         content: '→';
+    }
+
+}
+
+/* phone 横 */
+@media screen and (min-width: 320px) and (max-width: 812px) and (orientation: landscape) {
+    
+    #access {
+        background-image: url(../images/access-wave.svg);
+        background-size: 1540px;
+        margin-top: 40px;
+        height: auto;
+    }
+
+    .ac-text-map {
+        flex-wrap: wrap;
+        padding-top: 70px;
+        margin: 0;
+    }
+
+    .info-set {
+        width: 80%;
+    }
+
+    .g-map {
+        padding-left: 0;
+        margin-top: 40px;
+    }
+
+    iframe {
+        height: 100vh;
+        width: 80vw;
     }
 
 }
