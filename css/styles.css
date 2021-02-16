@@ -1,9 +1,9 @@
 @charset "utf-8";
 
-/* Author: Ai Ishizuka by Studio702
-Author URI: http://	 */
+/* Author: Ai Ishizuka by StudioHAP
+Author URI: http://
+----------------------------------------------------------------------------------------------
 
-/*
 ===== CONTENTS =====================================================
 
 	Index:
@@ -14,11 +14,8 @@ Author URI: http://	 */
 ===================================================================
 
 
-----------------------------------------------------------------------------------------------*/
-
-
-/* 1: Base Setting
-===================================================================*/
+1: Base Setting
+===================================================================
 
 
 /* Regulation-------------------------------------*/
@@ -78,7 +75,7 @@ html,body {
 
 h1 {    
     margin: 60px 0 14px 0;
-    font-size: .83rem;
+    font-size: .88rem;
     letter-spacing: .16em;
 }
 
@@ -89,7 +86,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 700;
     line-height: 1.4em;
 }
@@ -101,7 +98,7 @@ h2, h3 {
 
 p {
     text-align: justify;
-    font-size: .77rem;
+    font-size: .8rem;
     letter-spacing: .08em;
     line-height: 2.2em;
 }
@@ -159,6 +156,7 @@ a img {
     .x {
         width: 85%;
     }
+
 }
 
 /* 2:  Main Visual
@@ -202,6 +200,7 @@ a img {
 }
 
 .Logo {
+    display: block;
     margin-top: 20px;
 }
 
@@ -230,7 +229,7 @@ a img {
     padding: 14px 40px 14px 30px;
     border-radius: 30px;
     border: 2px solid #dcdcdc;
-    font-size: .8rem;
+    font-size: .88rem;
     font-weight: 500;
     letter-spacing: .1rem;
     background-color: #fff;
@@ -339,7 +338,7 @@ a img {
         display: inline-block;
         padding: 0 10%;
         width: 100%;
-        margin-top: 300px;
+        margin-top: 230px;
     }
 
     .title-name {
@@ -347,7 +346,6 @@ a img {
     }
 
     .Logo {
-        display: block;
         width: 305px;
         height: auto;
         margin-top: 18px;
@@ -532,8 +530,8 @@ a img {
     line-height: 2.46;
 }
 
-figure [src$="img-about01.jpg"] {
-    width: 100%;
+figure [src$="about-entrance.png"] {
+    width: 280px;
     max-width: 100%;
     height: auto;
 }
@@ -553,8 +551,7 @@ figure [src$="img-about01.jpg"] {
     }
 
     .about-inner {
-        flex-direction: column;
-        top: 160px;
+        flex-direction: row;
         position: static;
     }
 
@@ -574,8 +571,7 @@ figure [src$="img-about01.jpg"] {
     .ab-text-set {
         border: none;
         margin-top: 30px;
-        width: 80%;
-        margin-left: auto;
+        width: 70%;
     }
 
     .ab-text-img {
@@ -597,12 +593,10 @@ figure [src$="img-about01.jpg"] {
     }
 }
 
-
 @media screen and (max-width: 640px) {
     
     #about {
-        background-image: url(../images/about-wave-rp.svg);    
-        margin-top: 110px;
+        background-image: url(../images/about-wave-rp.svg);
         height: auto;
         min-height: auto;
     }
@@ -610,49 +604,22 @@ figure [src$="img-about01.jpg"] {
     .about-inner {
         flex-direction: column;
         top: 160px;
-        position: static;
-    }
-
-    .ab-h2 {
-        margin-top: 120px;
-        line-height: 1.45em;
-    }
-
-    .ab-copy {
-        margin-top: 10px;
-        line-height: 1.8em;
-        font-size: 1rem;
-        letter-spacing: .12em;
-        font-weight: 700;
     }
 
     .ab-text-set {
         padding: 0 0 0 30%;
-        border: none;
         margin-top: 60px;
         width: 100%;
     }
 
-    .ab-text-img {
-        display: block;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 20px;
-    }
     .ab-text {
-        width: 100%;
-        font-weight: 400;
-        font-size: .8rem;
         line-height: 2.2em;
-        letter-spacing: .08em;
     }
 
     .ab-img-store {
-        padding: 0;
-        margin-top: 20px;
+        margin-top: 10px;
     }
 }
-    
 
 
 /* 2.Style = concept -------------------------------------*/
@@ -725,8 +692,12 @@ figure [src$="img-about01.jpg"] {
 
 @media screen and (max-width: 1024px) {
 
+    #style {
+        margin-top: 100px;
+    }
+
     .s-h2 {
-        padding-top: 100px;
+        padding-top: 80px;
     }
 
     .s-list {
@@ -743,12 +714,13 @@ figure [src$="img-about01.jpg"] {
 
     .s-text-set {
         margin: 23px 0 0 0;
-        padding: 0 10%;
+        padding: 0 12%;
     }
 
     .s-icon {
         height: 120px;
     }
+
     .s-icon img {
         width: 100px;
     }
@@ -781,38 +753,14 @@ figure [src$="img-about01.jpg"] {
     .s-list {
         flex-wrap: wrap;
         margin-top: 40px;
-        padding: 0;
-    }
-
-    .s-list-one::before {
-        content: none;
-    }
-
-    .s-list-one {
-        margin-top: 65px;
-    }
-
-    .s-text-set {
-        margin: 23px 0 0 0;
-        padding: 0 12%;
     }
 
     .s-icon {
         padding-bottom: 0;
-        height: 120px;
-    }
-    .s-icon img {
-        width: 100px;
     }
 
     .s-text-set p {
         margin-top: 22px;
-        font-size: .8rem;
-    }
-
-    .s-h3 {
-        width: 80%;
-        margin: 0 auto;
     }
 }
 
@@ -869,6 +817,20 @@ figure [src$="img-about01.jpg"] {
 
 
 /* Responsive Settings -News- */
+
+@media screen and (max-width: 1024px) {
+
+    #news { 
+        height: 60vh;
+    }
+
+    .news-inner {
+        top: 35%;
+    }
+
+}
+
+
 @media screen and (max-width: 640px) {
 
     #news {
@@ -922,11 +884,6 @@ figure [src$="img-about01.jpg"] {
     background-image: url(../images/access-wave.svg);
     background-size: cover;
     height: 80vh;
-}
-
-.ac-h3 {
-    font-size: 1.1rem;
-    letter-spacing: .08em;
 }
 
 
@@ -999,7 +956,7 @@ figure [src$="img-about01.jpg"] {
 }
 
 .ac-hL {
-    background-color: #fffc82;
+    background: linear-gradient( transparent 60%, #fffc82 60% );
 }
 
 /* Notes */
@@ -1041,8 +998,46 @@ figure [src$="img-about01.jpg"] {
 }
 
 
-/* Responsive Settings -News- */
-@media screen and (max-width: 640px) {
+/* Responsive Settings -Access- */
+@media screen and (min-device-width: 640px) and
+    (max-device-width: 1024px) and (orientation:portrait) {
+    
+    #access {
+        background-image: url(../images/access-wave-rp.svg);
+        background-size: 100%;
+        height: auto;
+        min-height: 1370px;
+    }
+
+    .ac-text-map {
+        flex-wrap: wrap;
+        margin-top: 130px;
+    }
+
+    .g-map {
+        padding-left: 0;
+        margin-top: 60px;
+    }
+
+    iframe {
+        width: 500px;
+        height: 500px;
+    }
+
+}
+
+@media screen and (min-device-width: 640px) and
+    (max-device-width: 1024px) and (orientation: landscape) {
+    
+    .ac-text-map {
+        flex-wrap: nowrap;
+        margin-top: 90px;
+    }
+
+}
+
+
+@media screen and (max-device-width: 640px) {
 
     #access {
         background-image: url(../images/access-wave-rp.svg);
@@ -1050,6 +1045,7 @@ figure [src$="img-about01.jpg"] {
         height: auto;
         margin-top: 100px;
     }
+
     .ac-text-map {
         flex-wrap: wrap;
         margin-top: 100px;
@@ -1148,6 +1144,7 @@ figure [src$="img-about01.jpg"] {
 
 }
 
+
 /* Footer -------------------------------------*/
 
 
@@ -1199,6 +1196,7 @@ figure [src$="img-about01.jpg"] {
 
 
 /* Responsive Settings -Footer- */
+
 @media screen and (max-width: 640px) {
 
     #footer {
