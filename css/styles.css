@@ -530,7 +530,7 @@ a img {
     line-height: 2.46;
 }
 
-figure [src$="about-entrance.png"] {
+figure img[src$="about-entrance.png"] {
     width: 280px;
     max-width: 100%;
     height: auto;
