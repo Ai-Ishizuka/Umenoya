@@ -118,10 +118,6 @@ a img {
     height: auto;
 }
 
-.bold {
-    font-weight: 700;
-}
-
 /* Selection */
 
 ::selection {
@@ -329,6 +325,43 @@ a img {
     opacity: .4;
 }
 
+/* scroll down ber */
+
+.scrolldown {
+	position: absolute;
+	left: 50%;
+	bottom: 10px;
+	height: 50px;
+}
+
+.scrolldown::after{
+	content: "";
+	position: absolute;
+	top: 0;
+    width: 1px;
+    height: 80px;
+    background: #f00;
+    animation: pathmove 2.4s ease-in-out infinite;
+    opacity: 0;
+}
+
+@keyframes pathmove {
+	0%{
+		height:0;
+		top:0;
+		opacity: 0;
+	}
+	30%{
+		height: 80px;
+		opacity: 1;
+	}
+	100%{
+		height:0;
+		top: 130px;
+		opacity: 0;
+    }
+}
+
 /* Responsive Settings - Top -*/
 
 
@@ -422,7 +455,7 @@ a img {
     }
 
     .top-title-set {
-        margin-top: 170px;  
+        margin-top: 25vh;  
     }
 
     .title-name {
@@ -438,6 +471,22 @@ a img {
         padding-top: 8px;
     }
 
+    .nav-clk {
+        border: none;
+        background-color: transparent;
+        padding: 5px;
+        margin-left: 5px;
+        font-weight: 700;
+    }
+
+    .nav-clk::after {
+        display: none;
+    }
+
+    .nav-clk:hover {
+        display: none;
+    }
+
     .menu-button {
         width: 122px;
         height: 122px;
@@ -449,6 +498,7 @@ a img {
         font-size: .84rem;
         left: 23.5%;
     }
+
 }
 
 @media screen and (max-width: 812px) and (orientation: landscape) {
@@ -479,6 +529,10 @@ a img {
         height: auto;
         right: 20px;
         bottom: 40px;
+    }
+
+    .scrolldown {
+        display: none;
     }
 }
 
@@ -567,7 +621,7 @@ figure img[src$="images/about-entrance.png"] {
     }
 
     .ab-h2 {
-        margin-top: 120px;
+        margin-top: 80px;
         line-height: 1.45em;
     }
 
@@ -581,7 +635,7 @@ figure img[src$="images/about-entrance.png"] {
 
     .ab-text-set {
         border: none;
-        margin-top: 30px;
+        margin-top: 100px;
         width: 70%;
     }
 
@@ -620,12 +674,12 @@ figure img[src$="images/about-entrance.png"] {
 
     .ab-text-set {
         padding: 0 0 0 30%;
-        margin-top: 60px;
+        margin-top: 50px;
         width: 100%;
     }
 
     .ab-text {
-        line-height: 2.2em;
+        line-height: 2em;
     }
 
     .ab-img-store {
@@ -751,6 +805,7 @@ figure img[src$="images/about-entrance.png"] {
     }
 
     .s-list {
+        margin: 0;
         padding: 0;
     }
 
@@ -759,11 +814,11 @@ figure img[src$="images/about-entrance.png"] {
     }
 
     .s-list-one {
-        margin-top: 65px;
+        margin-top: 45px;
     }
 
     .s-text-set {
-        margin: 23px 0 0 0;
+        margin: 12px 0 0 0;
         padding: 0 12%;
     }
 
@@ -784,6 +839,11 @@ figure img[src$="images/about-entrance.png"] {
         margin: 0 auto;
     }
 
+    .s-icon svg {
+        width: 140px;
+        height: auto;
+    }
+
 }
 
 @media screen and (max-width: 640px) {
@@ -797,10 +857,6 @@ figure img[src$="images/about-entrance.png"] {
         height: auto;
     }
 
-    .s-h2 {
-        padding-top: 100px;
-    }
-
     .s-list {
         flex-wrap: wrap;
         margin-top: 40px;
@@ -811,7 +867,8 @@ figure img[src$="images/about-entrance.png"] {
     }
 
     .s-text-set p {
-        margin-top: 22px;
+        margin-top: 15px;
+        line-height: 2em;
     }
 
 }
@@ -984,7 +1041,6 @@ figure img[src$="images/about-entrance.png"] {
     height: 80vh;
 }
 
-
 /* Contents start */
 
 .ac-text-map {
@@ -1042,7 +1098,7 @@ figure img[src$="images/about-entrance.png"] {
     width: 30%;
     padding-right:20px;
     text-align: right;
-    letter-spacing: .04rem;
+    letter-spacing: .02rem;
     font-weight: 700;
 }
 
@@ -1101,6 +1157,10 @@ iframe {
     border: 7px solid #fff;
 }
 
+.g-map .check-g-map {
+    display: none;
+}
+
 
 /* Responsive Settings -Access- */
 
@@ -1130,6 +1190,10 @@ iframe {
         width: 70vw;
         height: 50vh;
     }
+    .bold {
+        font-weight: 700;
+    }
+
 
 }
 
@@ -1156,6 +1220,7 @@ iframe {
 
     .ad-text {
         font-size: .88rem;
+        letter-spacing: .04em;
     }
 
     .info-set {
@@ -1183,11 +1248,10 @@ iframe {
 
     .notes-hy {
         margin-top: 20px;
-        color: #666;
     }
 
     .notes-ast {
-        margin-top: 10px;
+        margin-top: 20px;
         line-height: 1em;
     }
 
@@ -1233,9 +1297,19 @@ iframe {
         width: 85vw;
     }
 
-    .arrow::before {
-        content: '→';
+    .ast2::before {
+        content: '*';
     }
+
+    .g-map .check-g-map {
+        display: block;
+        text-align: center;
+        font-size: .66rem;
+        padding: 5px 0 0 0;
+        background-color: transparent;
+        color: #257a01;
+    }
+    
 
 }
 
@@ -1340,7 +1414,7 @@ iframe {
     }
 
     .f-copyright, .f-copyright a {
-        margin-top: 35px;
+        margin-top: 20px;
         color: #999;
     }
 
@@ -1359,7 +1433,7 @@ iframe {
         display: inline-block;
         width: 160px;
         height: auto;
-        margin: 35px auto 0;
+        margin: 20px auto 0;
     }
 }
 
