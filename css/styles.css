@@ -21,13 +21,13 @@ Author URI: http://
 /* Regulation-------------------------------------*/
 
 html,body {
-    font-family: 'YakuHanJP_Noto', 'Noto Sans JP', "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",Meiryo,Verdana,Arial,sans-serif;
+    font-family: 'YakuHanJP_Noto', 'Noto Sans JP', "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ" , Meiryo, Verdana , Arial, sans-serif;
     font-style: normal;
     font-weight: 500;    
     font-feature-settings: "palt";
     text-rendering: optimizeLegibility;
     background: #fff;
-    color: #222;
+    color: #000;
 }
 
 *, *::before, *::after {
