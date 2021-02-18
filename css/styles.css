@@ -1319,6 +1319,9 @@ iframe {
     }
 
     .g-map {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         padding-left: 0;
         margin-top: 30px;
     }
@@ -1333,14 +1336,12 @@ iframe {
     }
 
     .g-map .check-g-map {
-        display: block;
-        text-align: center;
+        display: inline;
         font-size: .66rem;
-        padding: 7px 0 0 0;
+        padding: 7px;
         background-color: transparent;
         color: #257a01;
     }
-    
 
 }
 
@@ -1458,6 +1459,7 @@ iframe {
         flex-wrap: wrap;
         line-height: 1.6em;
         font-size: .66rem;
+        margin-top: 0px;
     }
 
     .f-Logo {
