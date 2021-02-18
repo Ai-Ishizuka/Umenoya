@@ -199,7 +199,7 @@ a img {
     font-size: .8rem;
     font-weight: 700;
     letter-spacing: .1rem;
-    background-color: #fce9e6;
+    background-color: #eeedee;
     border-radius: 20px;
     padding: 0 10px;
 }
@@ -330,18 +330,18 @@ a img {
 .scrolldown {
 	position: absolute;
 	left: 50%;
-	bottom: 10px;
-	height: 50px;
+	bottom: 70px;
+	height: 0px;
 }
 
 .scrolldown::after{
 	content: "";
 	position: absolute;
 	top: 0;
-    width: 1px;
-    height: 80px;
-    background: #f00;
-    animation: pathmove 2.4s ease-in-out infinite;
+    width: 1.3px;
+    height: 50px;
+    background: #f33;
+    animation: pathmove 1.4s ease-in-out infinite;
     opacity: 0;
 }
 
@@ -352,12 +352,12 @@ a img {
 		opacity: 0;
 	}
 	30%{
-		height: 80px;
+		height: 50px;
 		opacity: 1;
 	}
 	100%{
 		height:0;
-		top: 130px;
+		top: 80px;
 		opacity: 0;
     }
 }
@@ -441,7 +441,8 @@ a img {
 
     .page-top {
         right: 0;
-        width: 65px;
+        width: 60px;
+        opacity: .8;
     }
 }
 
@@ -450,8 +451,9 @@ a img {
     #top {
         display: block;
         background: url("../images/top-background-pattern.svg") repeat;
-        background-size: 115%;
-        background-position: 150px -300px;
+        background-size: 120%;
+        background-position: 70px 170px;
+        height: 105vh;
     }
 
     .top-title-set {
@@ -468,7 +470,12 @@ a img {
     }
     
     .t-nav-item {
-        padding-top: 8px;
+        margin-top: 10px;
+        padding: 0;
+    }
+
+    .t-nav-items {
+        margin-top: 35px;
     }
 
     .nav-clk {
@@ -477,6 +484,7 @@ a img {
         padding: 5px;
         margin-left: 5px;
         font-weight: 700;
+        color: #000;
     }
 
     .nav-clk::after {
@@ -495,8 +503,12 @@ a img {
     }
 
     .menu-button span {
-        font-size: .84rem;
-        left: 23.5%;
+        font-size: .88rem;
+        left: 23%;
+    }
+
+    .scrolldown {
+        bottom: 50px;
     }
 
 }
@@ -645,6 +657,7 @@ figure img[src$="images/about-entrance.png"] {
         justify-content: space-between;
         margin-top: 20px;
     }
+
     .ab-text {
         width: 100%;
         font-weight: 400;
@@ -665,6 +678,7 @@ figure img[src$="images/about-entrance.png"] {
         background-image: url(../images/about-wave-rp.svg);
         height: auto;
         min-height: auto;
+        margin-top: 90px;
     }
 
     .about-inner {
@@ -683,7 +697,7 @@ figure img[src$="images/about-entrance.png"] {
     }
 
     .ab-img-store {
-        margin-top: 10px;
+        margin-top: 20px;
     }
 
 }
@@ -867,7 +881,7 @@ figure img[src$="images/about-entrance.png"] {
     }
 
     .s-text-set p {
-        margin-top: 15px;
+        margin-top: 10px;
         line-height: 2em;
     }
 
@@ -919,7 +933,7 @@ figure img[src$="images/about-entrance.png"] {
 }
 
 .n-archive {
-    width: 50%;
+    width: 70%;
     height: 130px;
     margin: 30px auto 0;
     overflow-y: scroll;
@@ -934,7 +948,7 @@ figure img[src$="images/about-entrance.png"] {
     letter-spacing: .03em;
 }
 
-.archive-list a {
+.archive-list {
     padding: 8px 18px;
 }
 
@@ -942,6 +956,10 @@ figure img[src$="images/about-entrance.png"] {
     flex-basis: 30%;
     margin-top: 25px;
     padding-left: 28px;
+}
+
+.n-title:first-child {
+    color: #f33;
 }
 
 .n-date {
@@ -962,6 +980,16 @@ figure img[src$="images/about-entrance.png"] {
         top: 35%;
     }
 
+    .n-title {
+        flex-basis: 100%;
+        padding-left: 0;
+    }
+
+    .n-date {
+        flex-basis: 100%;
+        margin-top: 12px;
+    }
+
 }
 
 
@@ -976,29 +1004,29 @@ figure img[src$="images/about-entrance.png"] {
     }
     
     .news-inner {
-        top: 90px;
+        top: 60px;
     }
 
     .n-archive {
-        width: 85%;
-        height: auto;
-        margin: 75px 0 0 auto;
-        border-left: 2px solid #f00;
+        width: 100%;
+        height: 180px;
+        margin: 55px 0 0 auto;
+        border-left: 2px solid #f33;
     }
     
     .archive-list {
         display: block;
+        line-height: 1.5em;
     }
 
     .n-title {
         font-size: .77rem;
         margin-top: 30px;
-        padding-left: 15px;
+        padding-left: 0px;
     }
 
     .n-date {
-        text-indent: -1em;
-        margin-top: 12px;
+        margin-top: 0;
         padding-left: 35px;
     }
 
@@ -1111,6 +1139,11 @@ figure img[src$="images/about-entrance.png"] {
 
 .ac-hL {
     background: linear-gradient( transparent 60%, #fffc82 60% );
+    font-weight: 700;
+}
+
+.br-rp {
+    display: none;
 }
 
 /* Notes */
@@ -1190,11 +1223,6 @@ iframe {
         width: 70vw;
         height: 50vh;
     }
-    .bold {
-        font-weight: 700;
-    }
-
-
 }
 
 /* phone 縦 */
@@ -1293,7 +1321,7 @@ iframe {
     }
 
     iframe {
-        height: 60vh;
+        height: 75vh;
         width: 85vw;
     }
 
@@ -1305,7 +1333,7 @@ iframe {
         display: block;
         text-align: center;
         font-size: .66rem;
-        padding: 5px 0 0 0;
+        padding: 7px 0 0 0;
         background-color: transparent;
         color: #257a01;
     }
@@ -1401,7 +1429,7 @@ iframe {
 @media screen and (max-width: 640px) {
 
     #footer {
-        margin-top: 50px;
+        margin-top: 100px;
         padding: 0 0 25px 0;
     }
     
@@ -1414,7 +1442,7 @@ iframe {
     }
 
     .f-copyright, .f-copyright a {
-        margin-top: 20px;
+        margin-top: 30px;
         color: #999;
     }
 
@@ -1431,9 +1459,9 @@ iframe {
 
     .f-Logo {
         display: inline-block;
-        width: 160px;
+        width: 120px;
         height: auto;
-        margin: 20px auto 0;
+        margin: 10px auto 0;
     }
 }
 
