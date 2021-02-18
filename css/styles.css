@@ -340,7 +340,7 @@ a img {
 	top: 0;
     width: 1.3px;
     height: 50px;
-    background: #f33;
+    background: #257a01;
     animation: pathmove 1.4s ease-in-out infinite;
     opacity: 0;
 }
