@@ -492,7 +492,10 @@ a img {
     }
 
     .nav-clk:hover {
-        display: none;
+        color: #000;
+        background-color: transparent;
+        border: none;
+        transition: none;
     }
 
     .menu-button {
