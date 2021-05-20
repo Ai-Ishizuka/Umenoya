@@ -936,7 +936,7 @@ figure img[src$="images/about-entrance.png"] {
 
 .n-archive {
     width: 70%;
-    height: 130px;
+    height: 200px;
     margin: 30px auto 0;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
@@ -967,7 +967,7 @@ figure img[src$="images/about-entrance.png"] {
 .n-date {
     flex-basis: 70%;
     margin-top: 25px;
-    line-height: 1.3em;
+    line-height: 1.6em;
 }
 
 
@@ -1012,7 +1012,7 @@ figure img[src$="images/about-entrance.png"] {
 
     .n-archive {
         width: 100%;
-        height: 180px;
+        height: 200px;
         margin: 55px 0 0 auto;
         border-left: 2px solid #f33;
     }
